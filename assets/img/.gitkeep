@@ -1,0 +1,44 @@
+# Dossier pour les images
+
+Ce dossier contiendra toutes les images du site.
+
+## Images à ajouter :
+
+### Logo et favicon
+- favicon.png (32x32 ou 64x64)
+- logo.png (optionnel, si remplacement de l'emoji)
+
+### Page d'accueil
+- hero-jardin.jpg (1920x1080) - Image principale hero
+- conception-jardin.jpg (600x400)
+- realisation-professionnelle.jpg (600x400)
+- entretien-espaces-verts.jpg (600x400)
+
+### Réalisations (portfolio)
+- jardin-moderne-lyon.jpg (800x600)
+- terrasse-bois-composite.jpg (800x600)
+- jardin-zen-japonais.jpg (800x600)
+- amenagement-piscine.jpg (800x600)
+- jardin-mediterraneen.jpg (800x600)
+- haie-architecturee.jpg (800x600)
+... et autres photos de projets
+
+### À propos
+- equipe-milliat-paysagiste.jpg (1200x800)
+- jean-milliat-portrait.jpg (600x600)
+- sophie-durand-portrait.jpg (600x600)
+- marc-lefebvre-portrait.jpg (600x600)
+
+### Services
+- amenagement-paysager.jpg (700x500)
+- entretien-jardins.jpg (700x500)
+- elagage-arbres.jpg (700x500)
+- plantation-vegetaux.jpg (700x500)
+- arrosage-automatique.jpg (700x500)
+
+## Format recommandé
+- **Format** : JPEG pour les photos, PNG pour les logos/icônes
+- **Qualité** : 80-85% pour optimiser le poids
+- **Optimisation** : Utiliser des outils comme TinyPNG, ImageOptim
+- **Responsive** : Prévoir plusieurs tailles si besoin (mobile/desktop)
+- **Accessibilité** : Toujours renseigner l'attribut alt dans le HTML
