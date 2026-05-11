@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
@@ -7,6 +7,13 @@
   <meta name="keywords" content="contact paysagiste, devis gratuit, paysagiste Lyon contact">
   
   <title>Contact - Milliat Paysagiste | Devis gratuit sous 48h</title>
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Contact - Milliat Paysagiste">
+  <meta property="og:description" content="Demandez votre devis gratuit. Je vous réponds sous 48h. Zone d'intervention : 30 km autour d'Altkirch.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/img/background.png">
+  <meta property="og:locale" content="fr_FR">
   
   <!-- Liens CSS -->
   <link rel="stylesheet" href="assets/css/style.css">
@@ -20,20 +27,17 @@
   <!-- ============ HEADER & NAVIGATION ============ -->
   <header class="header">
     <div class="container">
-      <nav class="navbar">
-        <a href="index.html" class="logo">
-          Milliat Paysagiste
-        </a>
+      <nav class="navbar" aria-label="Navigation principale">
+        <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="Milliat Paysagiste"></a>
         
         <ul class="nav-menu">
           <li><a href="index.html" class="nav-link">Accueil</a></li>
           <li><a href="a-propos.html" class="nav-link">À propos</a></li>
           <li><a href="services.html" class="nav-link">Services</a></li>
-          <li><a href="realisations.html" class="nav-link">Réalisations</a></li>
           <li><a href="contact.html" class="nav-link btn btn-primary active">Contact</a></li>
         </ul>
         
-        <button class="burger" aria-label="Menu">
+        <button class="burger" aria-label="Menu" aria-expanded="false">
           <span></span>
           <span></span>
           <span></span>
@@ -42,11 +46,12 @@
     </div>
   </header>
   
+  <main>
   <!-- ============ HERO SECTION ============ -->
   <section class="hero" style="height: 50vh; min-height: 400px;">
-    <img src="https://via.placeholder.com/1920x800/6b9071/ffffff?text=Contactez-nous" alt="Contactez-nous" class="hero-bg">
+    <img src="./assets/img/background.png" alt="Contactez-moi" class="hero-bg">
     <div class="hero-content">
-      <h1>Contactez-nous</h1>
+      <h1>Contactez-moi</h1>
       <p>Parlons de votre projet. Devis gratuit sous 48h.</p>
     </div>
   </section>
@@ -62,28 +67,17 @@
       <div class="contact-wrapper">
         <!-- Informations de contact -->
         <div class="contact-info fade-in">
-          <h3>Nos coordonnées</h3>
+          <h3>Mes coordonnées</h3>
           <p style="margin-bottom: 2rem;">
-            Vous préférez nous appeler ou nous rendre visite ? Voici toutes nos informations de contact.
-          </p>
-          
-          <!-- Téléphone -->
-          <div class="contact-item">
-            <div class="contact-item-icon">📞</div>
-            <div class="contact-item-text">
-              <h4>Téléphone</h4>
-              <p>04 12 34 56 78</p>
-              <p style="font-size: 0.9rem; color: var(--color-gray);">Lun-Ven : 8h-18h | Sam : 9h-12h</p>
-            </div>
-          </div>
+            Voici toutes mes informations de contact.
           
           <!-- Email -->
           <div class="contact-item">
             <div class="contact-item-icon">✉️</div>
             <div class="contact-item-text">
               <h4>Email</h4>
-              <p>contact@milliat-paysagiste.fr</p>
-              <p style="font-size: 0.9rem; color: var(--color-gray);">Réponse sous 24h</p>
+              <p>milliat.paysage@gmail.com</p>
+              <p style="font-size: 0.9rem; color: var(--color-gray);">Réponse sous 48h</p>
             </div>
           </div>
           
@@ -92,7 +86,7 @@
             <div class="contact-item-icon">📍</div>
             <div class="contact-item-text">
               <h4>Zone d'intervention</h4>
-              <p>30 km autours de Mulhouse</p>
+              <p>30 km autour de Altkirch</p>
             </div>
           </div>
           
@@ -103,8 +97,6 @@
               <h4>Horaires d'ouverture</h4>
               <p>
                 Lundi - Vendredi : 8h00 - 18h00<br>
-                Samedi : 9h00 - 12h00<br>
-                Dimanche : Fermé
               </p>
             </div>
           </div>
@@ -120,34 +112,34 @@
             <!-- Nom -->
             <div class="form-group">
               <label for="nom">Nom *</label>
-              <input type="text" id="nom" name="nom" required placeholder="Votre nom">
+              <input type="text" id="nom" name="nom" required placeholder="Votre nom" autocomplete="family-name">
               <span class="error-message">Le nom est obligatoire</span>
             </div>
             
             <!-- Prénom -->
             <div class="form-group">
               <label for="prenom">Prénom *</label>
-              <input type="text" id="prenom" name="prenom" required placeholder="Votre prénom">
+              <input type="text" id="prenom" name="prenom" required placeholder="Votre prénom" autocomplete="given-name">
               <span class="error-message">Le prénom est obligatoire</span>
             </div>
             
             <!-- Email -->
             <div class="form-group">
               <label for="email">Email *</label>
-              <input type="email" id="email" name="email" required placeholder="votre.email@exemple.fr">
+              <input type="email" id="email" name="email" required placeholder="votre.email@exemple.fr" autocomplete="email">
               <span class="error-message">Veuillez entrer un email valide</span>
             </div>
             
             <!-- Téléphone -->
             <div class="form-group">
               <label for="telephone">Téléphone</label>
-              <input type="tel" id="telephone" name="telephone" placeholder="06 12 34 56 78">
+              <input type="tel" id="telephone" name="telephone" placeholder="06 12 34 56 78" autocomplete="tel">
               <span class="error-message">Numéro de téléphone invalide</span>
             </div>
             
             <!-- Secteur d'intervention -->
             <div class="form-group">
-              <label for="secteur">Secteur d'intervention (30 km autour de Mulhouse)</label>
+              <label for="secteur">Secteur d'intervention (30 km autour de Altkirch)</label>
               <input type="text" id="secteur" name="secteur" placeholder="Ex : Mulhouse, Illzach, Riedisheim...">
             </div>
             
@@ -213,7 +205,7 @@
                 ❓ Les devis sont-ils vraiment gratuits ?
               </h3>
               <p class="card-text">
-                Oui, tous nos devis sont 100% gratuits et sans engagement. Nous nous déplaçons chez vous 
+                Oui, tous mes devis sont 100% gratuits et sans engagement. Je me déplace chez vous 
                 pour évaluer votre projet et vous remettre un devis détaillé sous 48h maximum.
               </p>
             </div>
@@ -226,8 +218,8 @@
                 ❓ Quel est le délai pour démarrer les travaux ?
               </h3>
               <p class="card-text">
-                Selon la saison et notre planning, le délai varie entre 2 et 6 semaines. 
-                Pour les entretiens et petits travaux, nous pouvons intervenir plus rapidement.
+                Selon la saison et mon planning, le délai varie entre 2 et 6 semaines. 
+                Pour les entretiens et petits travaux, je peux intervenir plus rapidement.
               </p>
             </div>
           </div>
@@ -236,11 +228,11 @@
           <div class="card fade-in">
             <div class="card-content">
               <h3 class="card-title" style="display: flex; align-items: center; gap: 0.5rem;">
-                ❓ Intervenez-vous uniquement sur Lyon ?
+                ❓ Intervenez-vous loin d'Altkirch ?
               </h3>
               <p class="card-text">
-                Nous intervenons principalement sur Lyon et sa métropole (dans un rayon de 30 km). 
-                Pour des projets plus éloignés, contactez-nous pour étudier la faisabilité.
+                J'interviens principalement dans un rayon de 30 km autour d'Altkirch.
+                Pour des projets plus éloignés, contactez-moi pour étudier la faisabilité.
               </p>
             </div>
           </div>
@@ -252,7 +244,7 @@
                 ❓ Proposez-vous des facilités de paiement ?
               </h3>
               <p class="card-text">
-                Oui, pour les projets importants, nous proposons un paiement échelonné : 
+                Oui, pour les projets importants, je propose un paiement échelonné : 
                 30% à la commande, 40% en cours de chantier, 30% à la livraison.
               </p>
             </div>
@@ -263,55 +255,52 @@
   </section>
   
   <!-- ============ CALL TO ACTION ============ -->
-  <section class="cta-section">
+  <!-- <section class="cta-section">
     <div class="container">
-      <h2>Une urgence ? Appelez-nous !</h2>
-      <p>Pour une demande urgente (élagage dangereux, intervention rapide), contactez-nous directement par téléphone.</p>
+      <h2>Une urgence ? Appelez-moi !</h2>
+      <p>Pour une demande urgente (intervention rapide), contactez-moi directement par téléphone.</p>
       <a href="tel:0412345678" class="btn" style="background-color: var(--color-white); color: var(--color-primary); font-weight: 600;">
         📞 04 12 34 56 78
       </a>
     </div>
-  </section>
+  </section> -->
   
-  <!-- ============ FOOTER ============ -->
+  </main>
+
+<!-- ============ FOOTER ============ -->
   <footer class="footer">
     <div class="container">
       <div class="footer-content">
+        <!-- Section 1 : À propos -->
         <div class="footer-section">
           <h3>Milliat Paysagiste</h3>
           <p>
-            Expert en aménagement paysager depuis 2010, nous créons et entretenons des jardins qui vous ressemblent.
+            Expert en aménagement paysager depuis 2020, je crée et entretiens des jardins qui vous ressemblent.
           </p>
-          <div class="social-links">
-            <a href="#" class="social-link" aria-label="Facebook">📘</a>
-            <a href="#" class="social-link" aria-label="Instagram">📷</a>
-            <a href="#" class="social-link" aria-label="LinkedIn">💼</a>
-          </div>
         </div>
         
+        <!-- Section 2 : Liens rapides -->
         <div class="footer-section">
           <h3>Liens rapides</h3>
           <div class="footer-links">
             <a href="index.html">Accueil</a>
             <a href="a-propos.html">À propos</a>
             <a href="services.html">Services</a>
-            <a href="realisations.html">Réalisations</a>
             <a href="contact.html">Contact</a>
           </div>
         </div>
         
+        <!-- Section 3 : Contact -->
         <div class="footer-section">
           <h3>Contact</h3>
-          <p>📍 123 Rue des Jardins<br>69000 Lyon, France</p>
-          <p>📞 04 12 34 56 78</p>
-          <p>✉️ contact@milliat-paysagiste.fr</p>
+          <p>✉️ milliat.paysage@gmail.com</p>
         </div>
         
+        <!-- Section 4 : Horaires -->
         <div class="footer-section">
           <h3>Horaires</h3>
           <p>Lundi - Vendredi<br>8h00 - 18h00</p>
-          <p>Samedi<br>9h00 - 12h00</p>
-          <p>Dimanche<br>Fermé</p>
+          <p>Samedi - dimanche<br>Fermé</p>
         </div>
       </div>
       
@@ -323,7 +312,6 @@
   
   <!-- Scripts JS -->
   <script src="assets/js/main.js"></script>
-  <script src="assets/js/contact.js"></script>
   
 </body>
 </html>

@@ -169,32 +169,7 @@ function handleFormSubmit(form) {
   submitBtn.disabled = true;
   submitBtn.textContent = 'Envoi en cours...';
   
-  // Simuler l'envoi du formulaire (à remplacer par un vrai envoi)
-  // Dans un cas réel, vous utiliseriez fetch() pour envoyer à un backend
-  
-  setTimeout(() => {
-    console.log('Données du formulaire:', data);
-    
-    // Afficher le message de succès
-    showSuccessMessage(form);
-    
-    // Réinitialiser le formulaire
-    form.reset();
-    
-    // Réactiver le bouton
-    submitBtn.disabled = false;
-    submitBtn.textContent = originalBtnText;
-    
-    // Scroller vers le message de succès
-    const successMessage = form.querySelector('.success-message');
-    if (successMessage) {
-      successMessage.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  }, 1500);
-  
-  /* EXEMPLE D'ENVOI RÉEL AVEC FETCH:
-  
-  fetch('votre-url-backend.php', {
+  fetch('send-mail.php', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -206,19 +181,21 @@ function handleFormSubmit(form) {
     if (result.success) {
       showSuccessMessage(form);
       form.reset();
+      const successMessage = form.querySelector('.success-message');
+      if (successMessage) {
+        successMessage.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     } else {
-      showErrorMessage(form, result.message);
+      showErrorMessage(form, result.message || 'Une erreur est survenue. Veuillez réessayer.');
     }
   })
-  .catch(error => {
-    console.error('Erreur:', error);
-    showErrorMessage(form, 'Une erreur est survenue. Veuillez réessayer.');
+  .catch(() => {
+    showErrorMessage(form, 'Une erreur réseau est survenue. Veuillez réessayer.');
   })
   .finally(() => {
     submitBtn.disabled = false;
     submitBtn.textContent = originalBtnText;
   });
-  */
 }
 
 // ============ AFFICHER MESSAGE DE SUCCÈS ============

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
@@ -19,20 +19,17 @@
   <!-- ============ HEADER & NAVIGATION ============ -->
   <header class="header">
     <div class="container">
-      <nav class="navbar">
-        <a href="index.html" class="logo">
-          Milliat Paysagiste
-        </a>
+      <nav class="navbar" aria-label="Navigation principale">
+        <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="Milliat Paysagiste"></a>
         
         <ul class="nav-menu">
           <li><a href="index.html" class="nav-link">Accueil</a></li>
           <li><a href="a-propos.html" class="nav-link">À propos</a></li>
           <li><a href="services.html" class="nav-link">Services</a></li>
-          <li><a href="realisations.html" class="nav-link">Réalisations</a></li>
           <li><a href="contact.html" class="nav-link btn btn-primary">Contact</a></li>
         </ul>
         
-        <button class="burger" aria-label="Menu">
+        <button class="burger" aria-label="Menu" aria-expanded="false">
           <span></span>
           <span></span>
           <span></span>
@@ -41,9 +38,10 @@
     </div>
   </header>
   
+  <main>
   <!-- ============ HERO SECTION ============ -->
   <section class="hero" style="height: 40vh; min-height: 300px;">
-    <img src="https://via.placeholder.com/1920x600/6b9071/ffffff?text=Politique+Confidentialite" alt="Politique de confidentialité" class="hero-bg">
+    <img src="./assets/img/background.png" alt="Politique de confidentialité" class="hero-bg">
     <div class="hero-content">
       <h1>Politique de Confidentialité</h1>
       <p>Protection de vos données personnelles</p>
@@ -74,9 +72,8 @@
           <p style="color: var(--color-gray); line-height: 1.8;">
             <strong>Milliat Paysagiste</strong><br>
             Micro-entreprise<br>
-            [Adresse à compléter]<br>
-            SIRET : [À compléter]<br>
-            Email : contact@milliat-paysagiste.fr<br>
+            SIRET : 100592187<br>
+            Email : milliat.paysage@gmail.com<br>
             Téléphone : 04 12 34 56 78
           </p>
         </div>
@@ -259,9 +256,7 @@
             Pour exercer vos droits ou pour toute question concernant le traitement de vos données personnelles, vous pouvez nous contacter :
           </p>
           <ul style="color: var(--color-gray); line-height: 1.8; margin-left: 2rem;">
-            <li><strong>Par email :</strong> contact@milliat-paysagiste.fr</li>
-            <li><strong>Par téléphone :</strong> 04 12 34 56 78</li>
-            <li><strong>Par courrier :</strong> [Adresse à compléter]</li>
+            <li><strong>Par email :</strong> milliat.paysage@gmail.com</li>
             <li><strong>Via notre formulaire :</strong> <a href="contact.html" style="color: var(--color-primary); text-decoration: underline;">Page de contact</a></li>
           </ul>
           <p style="color: var(--color-gray); line-height: 1.8;">
@@ -325,41 +320,36 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-content">
+        <!-- Section 1 : À propos -->
         <div class="footer-section">
           <h3>Milliat Paysagiste</h3>
           <p>
-            Expert en aménagement paysager depuis 2010, nous créons et entretenons des jardins qui vous ressemblent.
+            Expert en aménagement paysager depuis 2020, je crée et entretiens des jardins qui vous ressemblent.
           </p>
-          <div class="social-links">
-            <a href="#" class="social-link" aria-label="Facebook">📘</a>
-            <a href="#" class="social-link" aria-label="Instagram">📷</a>
-            <a href="#" class="social-link" aria-label="LinkedIn">💼</a>
-          </div>
         </div>
         
+        <!-- Section 2 : Liens rapides -->
         <div class="footer-section">
           <h3>Liens rapides</h3>
           <div class="footer-links">
             <a href="index.html">Accueil</a>
             <a href="a-propos.html">À propos</a>
             <a href="services.html">Services</a>
-            <a href="realisations.html">Réalisations</a>
             <a href="contact.html">Contact</a>
           </div>
         </div>
         
+        <!-- Section 3 : Contact -->
         <div class="footer-section">
           <h3>Contact</h3>
-          <p>📍 123 Rue des Jardins<br>69000 Lyon, France</p>
-          <p>📞 04 12 34 56 78</p>
-          <p>✉️ contact@milliat-paysagiste.fr</p>
+          <p>✉️ milliat.paysage@gmail.com</p>
         </div>
         
+        <!-- Section 4 : Horaires -->
         <div class="footer-section">
           <h3>Horaires</h3>
           <p>Lundi - Vendredi<br>8h00 - 18h00</p>
-          <p>Samedi<br>9h00 - 12h00</p>
-          <p>Dimanche<br>Fermé</p>
+          <p>Samedi - dimanche<br>Fermé</p>
         </div>
       </div>
       

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
@@ -19,20 +19,17 @@
   <!-- ============ HEADER & NAVIGATION ============ -->
   <header class="header">
     <div class="container">
-      <nav class="navbar">
-        <a href="index.html" class="logo">
-          Milliat Paysagiste
-        </a>
+      <nav class="navbar" aria-label="Navigation principale">
+        <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="Milliat Paysagiste"></a>
         
         <ul class="nav-menu">
           <li><a href="index.html" class="nav-link">Accueil</a></li>
           <li><a href="a-propos.html" class="nav-link">À propos</a></li>
           <li><a href="services.html" class="nav-link">Services</a></li>
-          <li><a href="realisations.html" class="nav-link">Réalisations</a></li>
           <li><a href="contact.html" class="nav-link btn btn-primary">Contact</a></li>
         </ul>
         
-        <button class="burger" aria-label="Menu">
+        <button class="burger" aria-label="Menu" aria-expanded="false">
           <span></span>
           <span></span>
           <span></span>
@@ -41,9 +38,10 @@
     </div>
   </header>
   
+  <main>
   <!-- ============ HERO SECTION ============ -->
   <section class="hero" style="height: 40vh; min-height: 300px;">
-    <img src="https://via.placeholder.com/1920x600/2d5f3f/ffffff?text=Mentions+Legales" alt="Mentions légales" class="hero-bg">
+    <img src="./assets/img/background.png" alt="Mentions légales" class="hero-bg">
     <div class="hero-content">
       <h1>Mentions Légales</h1>
       <p>Informations légales et réglementaires</p>
@@ -60,11 +58,9 @@
           <h2>1. Identification de l'entreprise</h2>
           <p style="color: var(--color-gray); line-height: 1.8;">
             <strong>Forme juridique :</strong> Micro-entreprise<br>
-            <strong>Nom du responsable :</strong> [À COMPLÉTER]<br>
-            <strong>Adresse du siège social :</strong> [À COMPLÉTER]<br>
-            <strong>Numéro SIRET :</strong> [À COMPLÉTER]<br>
-            <strong>Email :</strong> contact@milliat-paysagiste.fr<br>
-            <strong>Téléphone :</strong> 04 12 34 56 78
+            <strong>Nom du responsable :</strong> Alexis Milliat<br>
+            <strong>Numéro SIRET :</strong> 100592187<br>
+            <strong>Email :</strong> milliat.paysage@gmail.com<br>
           </p>
         </div>
         
@@ -72,7 +68,7 @@
         <div class="fade-in" style="margin-bottom: 3rem;">
           <h2>2. Directeur de publication</h2>
           <p style="color: var(--color-gray); line-height: 1.8;">
-            Le directeur de la publication du site est : [À COMPLÉTER]
+            Le directeur de la publication du site est : Gaëtan Plassard
           </p>
         </div>
         
@@ -81,9 +77,9 @@
           <h2>3. Hébergement du site</h2>
           <p style="color: var(--color-gray); line-height: 1.8;">
             Le site est hébergé par :<br>
-            <strong>Nom de l'hébergeur :</strong> [À COMPLÉTER]<br>
-            <strong>Adresse :</strong> [À COMPLÉTER]<br>
-            <strong>Téléphone :</strong> [À COMPLÉTER]
+            <strong>Nom de l'hébergeur :</strong> O2SWITCH<br>
+            <strong>Adresse :</strong> chemin des pardiaux 63000 Clermont-ferrand<br>
+            <strong>Téléphone :</strong> 04 44 44 60 40<br>
           </p>
         </div>
         
@@ -108,7 +104,7 @@
             Les informations contenues sur ce site sont aussi précises que possible et le site est périodiquement remis à jour, mais peut toutefois contenir des inexactitudes, des omissions ou des lacunes.
           </p>
           <p style="color: var(--color-gray); line-height: 1.8;">
-            Si vous constatez une lacune, erreur ou ce qui paraît être un dysfonctionnement, merci de bien vouloir le signaler par email à l'adresse contact@milliat-paysagiste.fr, en décrivant le problème de la manière la plus précise possible.
+            Si vous constatez une lacune, erreur ou ce qui paraît être un dysfonctionnement, merci de bien vouloir le signaler par email à l'adresse milliat.paysage@gmail.com, en décrivant le problème de la manière la plus précise possible.
           </p>
           <p style="color: var(--color-gray); line-height: 1.8;">
             Tout contenu téléchargé se fait aux risques et périls de l'utilisateur et sous sa seule responsabilité. En conséquence, Milliat Paysagiste ne saurait être tenu responsable d'un quelconque dommage subi par l'ordinateur de l'utilisateur ou d'une quelconque perte de données consécutive au téléchargement.
@@ -128,8 +124,7 @@
             Pour exercer ces droits, vous pouvez nous contacter :
           </p>
           <ul style="color: var(--color-gray); line-height: 1.8; margin-left: 2rem;">
-            <li>Par email : contact@milliat-paysagiste.fr</li>
-            <li>Par courrier : [ADRESSE À COMPLÉTER]</li>
+            <li>Par email : milliat.paysage@gmail.com</li>
           </ul>
           <p style="color: var(--color-gray); line-height: 1.8;">
             Pour plus d'informations sur la gestion de vos données personnelles, consultez notre <a href="politique-confidentialite.html" style="color: var(--color-primary); text-decoration: underline;">Politique de Confidentialité</a>.
@@ -157,8 +152,7 @@
             Pour toute question concernant ces mentions légales, vous pouvez nous contacter :
           </p>
           <ul style="color: var(--color-gray); line-height: 1.8; margin-left: 2rem;">
-            <li><strong>Email :</strong> contact@milliat-paysagiste.fr</li>
-            <li><strong>Téléphone :</strong> 04 12 34 56 78</li>
+            <li><strong>Email :</strong> milliat.paysage@gmail.com</li>
             <li><strong>Formulaire de contact :</strong> <a href="contact.html" style="color: var(--color-primary); text-decoration: underline;">Cliquez ici</a></li>
           </ul>
         </div>
@@ -186,41 +180,36 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-content">
+        <!-- Section 1 : À propos -->
         <div class="footer-section">
           <h3>Milliat Paysagiste</h3>
           <p>
-            Expert en aménagement paysager depuis 2010, nous créons et entretenons des jardins qui vous ressemblent.
+            Expert en aménagement paysager depuis 2020, je crée et entretiens des jardins qui vous ressemblent.
           </p>
-          <div class="social-links">
-            <a href="#" class="social-link" aria-label="Facebook">📘</a>
-            <a href="#" class="social-link" aria-label="Instagram">📷</a>
-            <a href="#" class="social-link" aria-label="LinkedIn">💼</a>
-          </div>
         </div>
         
+        <!-- Section 2 : Liens rapides -->
         <div class="footer-section">
           <h3>Liens rapides</h3>
           <div class="footer-links">
             <a href="index.html">Accueil</a>
             <a href="a-propos.html">À propos</a>
             <a href="services.html">Services</a>
-            <a href="realisations.html">Réalisations</a>
             <a href="contact.html">Contact</a>
           </div>
         </div>
         
+        <!-- Section 3 : Contact -->
         <div class="footer-section">
           <h3>Contact</h3>
-          <p>📍 123 Rue des Jardins<br>69000 Lyon, France</p>
-          <p>📞 04 12 34 56 78</p>
-          <p>✉️ contact@milliat-paysagiste.fr</p>
+          <p>✉️ milliat.paysage@gmail.com</p>
         </div>
         
+        <!-- Section 4 : Horaires -->
         <div class="footer-section">
           <h3>Horaires</h3>
           <p>Lundi - Vendredi<br>8h00 - 18h00</p>
-          <p>Samedi<br>9h00 - 12h00</p>
-          <p>Dimanche<br>Fermé</p>
+          <p>Samedi - dimanche<br>Fermé</p>
         </div>
       </div>
       

@@ -24,9 +24,10 @@ function initBurgerMenu() {
   
   // Toggle menu au clic sur le burger
   burger.addEventListener('click', function() {
-    burger.classList.toggle('active');
+    const isOpen = burger.classList.toggle('active');
     navMenu.classList.toggle('active');
     body.classList.toggle('menu-open');
+    burger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
   });
   
   // Fermer le menu au clic sur un lien
@@ -35,6 +36,7 @@ function initBurgerMenu() {
       burger.classList.remove('active');
       navMenu.classList.remove('active');
       body.classList.remove('menu-open');
+      burger.setAttribute('aria-expanded', 'false');
     });
   });
   

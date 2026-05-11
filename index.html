@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
@@ -8,6 +8,13 @@
   <meta name="author" content="Milliat Paysagiste">
   
   <title>Milliat Paysagiste - Expert en aménagement paysager | Accueil</title>
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Milliat Paysagiste - Expert en aménagement paysager">
+  <meta property="og:description" content="Paysagiste avec plus de 6 ans d'expérience. Création, aménagement et entretien de jardins autour d'Altkirch. Devis gratuit.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/img/background.png">
+  <meta property="og:locale" content="fr_FR">
   
   <!-- Liens CSS -->
   <link rel="stylesheet" href="assets/css/style.css">
@@ -21,23 +28,20 @@
   <!-- ============ HEADER & NAVIGATION ============ -->
   <header class="header">
     <div class="container">
-      <nav class="navbar">
+      <nav class="navbar" aria-label="Navigation principale">
         <!-- Logo -->
-        <a href="index.html" class="logo">
-          Milliat Paysagiste
-        </a>
+        <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="Milliat Paysagiste"></a>
         
         <!-- Menu de navigation -->
         <ul class="nav-menu">
           <li><a href="index.html" class="nav-link active">Accueil</a></li>
           <li><a href="a-propos.html" class="nav-link">À propos</a></li>
           <li><a href="services.html" class="nav-link">Services</a></li>
-          <li><a href="realisations.html" class="nav-link">Réalisations</a></li>
           <li><a href="contact.html" class="nav-link btn btn-primary">Contact</a></li>
         </ul>
         
         <!-- Burger menu (mobile) -->
-        <button class="burger" aria-label="Menu">
+        <button class="burger" aria-label="Menu" aria-expanded="false">
           <span></span>
           <span></span>
           <span></span>
@@ -46,12 +50,13 @@
     </div>
   </header>
   
+  <main>
   <!-- ============ HERO SECTION ============ -->
   <section class="hero">
-    <img src="https://via.placeholder.com/1920x1080/2d5f3f/ffffff?text=Jardin+Paysager" alt="Jardin paysager" class="hero-bg">
+    <img src="./assets/img/background.png" alt="Jardin paysager" class="hero-bg">
     <div class="hero-content">
       <h1>Créons ensemble votre jardin idéal</h1>
-      <p>Expert en aménagement paysager depuis plus de 15 ans. Nous transformons vos espaces extérieurs en véritables havres de paix.</p>
+      <p>Paysagiste avec plus de 6 ans d’expérience, je mets ma créativité et mon savoir‑faire au service de votre extérieur pour le sublimer et le rendre agréable à vivre.</p>
       <a href="contact.html" class="btn btn-primary">Demander un devis gratuit</a>
     </div>
   </section>
@@ -67,29 +72,29 @@
       <div class="cards-grid">
         <!-- Card 1 -->
         <div class="card fade-in">
-          <img src="https://via.placeholder.com/400x250/6b9071/ffffff?text=Conception" alt="Conception paysagère" class="card-img">
+          <img src="./assets/img/conception-sur-mesure.jpg" alt="Conception paysagère" class="card-img">
           <div class="card-content">
             <h3 class="card-title">Conception sur mesure</h3>
             <p class="card-text">
-              Nous étudions votre projet en détail pour créer un aménagement qui correspond parfaitement à vos envies et à votre budget.
+              J’étudie votre projet en détail pour créer un aménagement qui correspond parfaitement à vos envies et à votre budget.
             </p>
           </div>
         </div>
         
         <!-- Card 2 -->
         <div class="card fade-in">
-          <img src="https://via.placeholder.com/400x250/8fae8d/ffffff?text=Réalisation" alt="Réalisation de jardins" class="card-img">
+          <img src="./assets/img/realisation-pro.jpg" alt="Réalisation de jardins" class="card-img">
           <div class="card-content">
             <h3 class="card-title">Réalisation professionnelle</h3>
             <p class="card-text">
-              Une équipe qualifiée et des équipements modernes pour concrétiser votre projet dans les règles de l'art.
+              Je mets à votre disposition mon expertise et des équipements modernes pour concrétiser votre projet dans les règles de l'art.
             </p>
           </div>
         </div>
         
         <!-- Card 3 -->
         <div class="card fade-in">
-          <img src="https://via.placeholder.com/400x250/2d5f3f/ffffff?text=Entretien" alt="Entretien d'espaces verts" class="card-img">
+          <img src="./assets/img/entretient-regulier.jpg" alt="Entretien d'espaces verts" class="card-img">
           <div class="card-content">
             <h3 class="card-title">Entretien régulier</h3>
             <p class="card-text">
@@ -105,7 +110,7 @@
   <section class="section" style="background-color: var(--color-beige);">
     <div class="container">
       <div class="section-title fade-in">
-        <h2>Nos domaines d'expertise</h2>
+        <h2>Mes domaines d'expertise</h2>
       </div>
       
       <div class="services-grid">
@@ -113,13 +118,13 @@
         <div class="service-item fade-in">
           <div class="service-icon">🌳</div>
           <h3>Aménagement paysager</h3>
-          <p>Création de jardins, terrasses et allées sur mesure</p>
+          <p>Création et entretien de jardins, conception sur mesure</p>
         </div>
         
         <!-- Service 2 -->
         <div class="service-item fade-in">
           <div class="service-icon">✂️</div>
-          <h3>Taille & Élagage</h3>
+          <h3>Taille & haies</h3>
           <p>Entretien et mise en forme de vos arbres et haies</p>
         </div>
         
@@ -129,17 +134,10 @@
           <h3>Plantation</h3>
           <p>Sélection et plantation de végétaux adaptés</p>
         </div>
-        
-        <!-- Service 4 -->
-        <div class="service-item fade-in">
-          <div class="service-icon">💧</div>
-          <h3>Arrosage automatique</h3>
-          <p>Installation de systèmes d'arrosage intelligents</p>
-        </div>
       </div>
       
       <div style="text-align: center; margin-top: 3rem;">
-        <a href="services.html" class="btn btn-primary">Découvrir tous nos services</a>
+        <a href="services.html" class="btn btn-primary">Découvrir tous mes services</a>
       </div>
     </div>
   </section>
@@ -149,17 +147,17 @@
     <div class="container">
       <div class="stats-grid">
         <div class="stat-item fade-in">
-          <span class="stat-number">5</span>
+          <span class="stat-number">6</span>
           <span class="stat-label">Ans d'expérience</span>
         </div>
         
         <div class="stat-item fade-in">
-          <span class="stat-number">40</span>
+          <span class="stat-number">85</span>
           <span class="stat-label">Projets réalisés</span>
         </div>
         
         <div class="stat-item fade-in">
-          <span class="stat-number">100</span>
+          <span class="stat-number">96</span>
           <span class="stat-label">% Clients satisfaits</span>
         </div>
         
@@ -175,62 +173,35 @@
   <section class="section">
     <div class="container">
       <div class="section-title fade-in">
-        <h2>Nos dernières réalisations</h2>
-        <p>Découvrez quelques-uns de nos projets récents</p>
+        <h2>Mes dernières réalisations</h2>
+        <p>Découvrez quelques-uns de mes projets récents</p>
       </div>
       
       <div class="gallery-grid">
         <!-- Réalisation 1 -->
         <div class="gallery-item fade-in">
-          <img src="https://via.placeholder.com/600x400/2d5f3f/ffffff?text=Jardin+Moderne" alt="Jardin moderne">
+          <img src="./assets/img/realisation-1.png" alt="Tonte de pelouse">
           <div class="gallery-overlay">
-            <h3>Jardin moderne avec terrasse</h3>
+            <h3>Tonte de pelouse</h3>
           </div>
         </div>
         
         <!-- Réalisation 2 -->
         <div class="gallery-item fade-in">
-          <img src="https://via.placeholder.com/600x400/6b9071/ffffff?text=Terrasse+Bois" alt="Terrasse en bois">
+          <img src="./assets/img/realisation-2.png" alt="Taille de haies">
           <div class="gallery-overlay">
-            <h3>Terrasse en bois exotique</h3>
+            <h3>Taille de haies</h3>
           </div>
         </div>
         
         <!-- Réalisation 3 -->
         <div class="gallery-item fade-in">
-          <img src="https://via.placeholder.com/600x400/8fae8d/ffffff?text=Jardin+Japonais" alt="Jardin japonais">
+          <img src="./assets/img/service-2.jpg" alt="Entretien de jardins">
           <div class="gallery-overlay">
-            <h3>Jardin zen japonisant</h3>
+            <h3>Entretien d'un jardin</h3>
           </div>
         </div>
         
-        <!-- Réalisation 4 -->
-        <div class="gallery-item fade-in">
-          <img src="https://via.placeholder.com/600x400/2d5f3f/ffffff?text=Piscine" alt="Aménagement piscine">
-          <div class="gallery-overlay">
-            <h3>Aménagement autour d'une piscine</h3>
-          </div>
-        </div>
-        
-        <!-- Réalisation 5 -->
-        <div class="gallery-item fade-in">
-          <img src="https://via.placeholder.com/600x400/6b9071/ffffff?text=Haie" alt="Haie taillée">
-          <div class="gallery-overlay">
-            <h3>Haie architecturée</h3>
-          </div>
-        </div>
-        
-        <!-- Réalisation 6 -->
-        <div class="gallery-item fade-in">
-          <img src="https://via.placeholder.com/600x400/8fae8d/ffffff?text=Potager" alt="Potager">
-          <div class="gallery-overlay">
-            <h3>Potager décoratif</h3>
-          </div>
-        </div>
-      </div>
-      
-      <div style="text-align: center; margin-top: 3rem;">
-        <a href="realisations.html" class="btn btn-outline">Voir toutes nos réalisations</a>
       </div>
     </div>
   </section>
@@ -239,12 +210,14 @@
   <section class="cta-section">
     <div class="container">
       <h2>Un projet d'aménagement paysager ?</h2>
-      <p>Contactez-nous dès aujourd'hui pour un devis gratuit et sans engagement. Nous serons ravis de discuter de votre projet.</p>
+      <p>Contactez-moi dès aujourd'hui pour un devis gratuit et sans engagement. Je serai ravi de discuter de votre projet.</p>
       <a href="contact.html" class="btn">Demander un devis</a>
     </div>
   </section>
   
-  <!-- ============ FOOTER ============ -->
+  </main>
+
+<!-- ============ FOOTER ============ -->
   <footer class="footer">
     <div class="container">
       <div class="footer-content">
@@ -252,13 +225,8 @@
         <div class="footer-section">
           <h3>Milliat Paysagiste</h3>
           <p>
-            Expert en aménagement paysager depuis 2010, nous créons et entretenons des jardins qui vous ressemblent.
+            Expert en aménagement paysager depuis 2020, je crée et entretiens des jardins qui vous ressemblent.
           </p>
-          <div class="social-links">
-            <a href="#" class="social-link" aria-label="Facebook">📘</a>
-            <a href="#" class="social-link" aria-label="Instagram">📷</a>
-            <a href="#" class="social-link" aria-label="LinkedIn">💼</a>
-          </div>
         </div>
         
         <!-- Section 2 : Liens rapides -->
@@ -268,7 +236,6 @@
             <a href="index.html">Accueil</a>
             <a href="a-propos.html">À propos</a>
             <a href="services.html">Services</a>
-            <a href="realisations.html">Réalisations</a>
             <a href="contact.html">Contact</a>
           </div>
         </div>
@@ -276,17 +243,14 @@
         <!-- Section 3 : Contact -->
         <div class="footer-section">
           <h3>Contact</h3>
-          <p>📍 123 Rue des Jardins<br>69000 Lyon, France</p>
-          <p>📞 04 12 34 56 78</p>
-          <p>✉️ contact@milliat-paysagiste.fr</p>
+          <p>✉️ milliat.paysage@gmail.com</p>
         </div>
         
         <!-- Section 4 : Horaires -->
         <div class="footer-section">
           <h3>Horaires</h3>
           <p>Lundi - Vendredi<br>8h00 - 18h00</p>
-          <p>Samedi<br>9h00 - 12h00</p>
-          <p>Dimanche<br>Fermé</p>
+          <p>Samedi - dimanche<br>Fermé</p>
         </div>
       </div>
       

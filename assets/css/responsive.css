@@ -185,6 +185,11 @@
     justify-content: center;
   }
   
+  /* About image */
+  .about-image {
+    height: 280px;
+  }
+
   /* Contact */
   .contact-form,
   .contact-info {
@@ -242,9 +247,9 @@
   .logo {
     font-size: 1.25rem;
   }
-  
-  .logo::before {
-    font-size: 1.5rem;
+
+  .logo img {
+    height: 40px;
   }
   
   /* Nav menu mobile */

@@ -1,12 +1,19 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Découvrez Milliat Paysagiste, une entreprise familiale passionnée par l'aménagement paysager depuis plus de 15 ans. Notre histoire, nos valeurs, notre équipe.">
-  <meta name="keywords" content="paysagiste Lyon, entreprise paysagiste, équipe paysagiste, histoire">
+  <meta name="description" content="Découvrez Milliat Paysagiste, un artisan passionnée par l'aménagement paysager depuis plus de 6 ans. Mon histoire, mes valeurs, mon travail.">
+  <meta name="keywords" content="paysagiste Mulhouse, entreprise paysagiste, artisan paysagiste, histoire">
   
-  <title>À propos - Milliat Paysagiste | Notre histoire et nos valeurs</title>
+  <title>À propos - Milliat Paysagiste | Mon histoire et mes valeurs</title>
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="À propos - Milliat Paysagiste">
+  <meta property="og:description" content="Alexis Milliat, paysagiste passionné depuis 2020. Découvrez mon histoire, mes valeurs et mon approche écologique.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/img/background.png">
+  <meta property="og:locale" content="fr_FR">
   
   <!-- Liens CSS -->
   <link rel="stylesheet" href="assets/css/style.css">
@@ -20,20 +27,17 @@
   <!-- ============ HEADER & NAVIGATION ============ -->
   <header class="header">
     <div class="container">
-      <nav class="navbar">
-        <a href="index.html" class="logo">
-          Milliat Paysagiste
-        </a>
+      <nav class="navbar" aria-label="Navigation principale">
+        <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="Milliat Paysagiste"></a>
         
         <ul class="nav-menu">
           <li><a href="index.html" class="nav-link">Accueil</a></li>
           <li><a href="a-propos.html" class="nav-link active">À propos</a></li>
           <li><a href="services.html" class="nav-link">Services</a></li>
-          <li><a href="realisations.html" class="nav-link">Réalisations</a></li>
           <li><a href="contact.html" class="nav-link btn btn-primary">Contact</a></li>
         </ul>
         
-        <button class="burger" aria-label="Menu">
+        <button class="burger" aria-label="Menu" aria-expanded="false">
           <span></span>
           <span></span>
           <span></span>
@@ -42,9 +46,10 @@
     </div>
   </header>
   
+  <main>
   <!-- ============ HERO SECTION ============ -->
   <section class="hero" style="height: 50vh; min-height: 400px;">
-    <img src="https://via.placeholder.com/1920x800/6b9071/ffffff?text=Notre+Equipe" alt="Équipe Milliat Paysagiste" class="hero-bg">
+    <img src="./assets/img/background.png" alt="Équipe Milliat Paysagiste" class="hero-bg">
     <div class="hero-content">
       <h1>À propos de nous</h1>
       <p>Passion, expertise et engagement pour votre jardin</p>
@@ -56,24 +61,24 @@
     <div class="container">
       <div class="about-content">
         <div class="about-image fade-in">
-          <img src="https://via.placeholder.com/600x700/2d5f3f/ffffff?text=Jean+Milliat" alt="Jean Milliat, fondateur">
+          <img src="./assets/img/aleixs_photo.jpg" alt="Alexis Milliat, fondateur">
         </div>
         
         <div class="about-text fade-in">
           <h2>Une histoire de passion</h2>
           <p>
-            Fondée en 2010 par Jean Milliat, notre entreprise est née d'une passion profonde pour la nature et le travail de la terre. Fort d'une formation en horticulture et paysagisme, Jean a décidé de créer sa propre entreprise pour offrir des services d'aménagement paysager de qualité.
+            Je m’appelle Alexis Milliat. J’ai commencé le paysagisme en 2020 après l’obtention d’un diplôme en paysagisme et une première expérience en entreprise autour de Bourgoin‑Jallieu.
           </p>
           <p>
-            Depuis plus de 15 ans, nous avons eu le privilège d'accompagner des centaines de particuliers et d'entreprises dans la concrétisation de leurs projets d'espaces verts. Chaque jardin que nous créons est unique et reflète la personnalité de nos clients.
+            Depuis plus de 6 ans, j'ai eu le privilège d'accompagner des centaines de particuliers et d'entreprises dans la concrétisation de leurs projets d'espaces verts. Chaque jardin que je crée est unique et reflète la personnalité de mes clients.
           </p>
           
-          <h3>Notre philosophie</h3>
+          <h3>Ma philosophie</h3>
           <p>
-            Nous croyons fermement que chaque espace extérieur a un potentiel extraordinaire. Notre mission est de révéler ce potentiel en créant des jardins qui allient esthétique, fonctionnalité et respect de l'environnement.
+            Je crois fermement que chaque espace extérieur a un potentiel extraordinaire. Ma mission est de révéler ce potentiel en créant des jardins qui allient esthétique, fonctionnalité et respect de l'environnement.
           </p>
           <p>
-            Nous privilégions les plantations adaptées au climat local, les techniques de jardinage écologique et les matériaux durables. Notre objectif : créer des espaces verts qui s'épanouissent naturellement et durent dans le temps.
+            Je privilégie les plantations adaptées au climat local, les techniques de jardinage écologique et les matériaux durables. Mon objectif : créer des espaces verts qui s'épanouissent naturellement et durent dans le temps.
           </p>
         </div>
       </div>
@@ -84,8 +89,8 @@
   <section class="section" style="background-color: var(--color-beige);">
     <div class="container">
       <div class="section-title fade-in">
-        <h2>Nos valeurs</h2>
-        <p>Ce qui guide notre travail au quotidien</p>
+        <h2>Mes valeurs</h2>
+        <p>Ce qui guide mon travail au quotidien</p>
       </div>
       
       <div class="values-grid">
@@ -93,21 +98,21 @@
         <div class="value-item fade-in">
           <div class="value-icon">🎯</div>
           <h4>Excellence</h4>
-          <p>Nous visons la perfection dans chaque projet, du plus simple au plus complexe.</p>
+          <p>Je vise la perfection dans chaque projet, du plus simple au plus complexe.</p>
         </div>
         
         <!-- Valeur 2 -->
         <div class="value-item fade-in">
           <div class="value-icon">🤝</div>
           <h4>Écoute</h4>
-          <p>Votre satisfaction est notre priorité. Nous prenons le temps de comprendre vos besoins.</p>
+          <p>Votre satisfaction est ma priorité. Je prends le temps de comprendre vos besoins.</p>
         </div>
         
         <!-- Valeur 3 -->
         <div class="value-item fade-in">
           <div class="value-icon">🌍</div>
           <h4>Écologie</h4>
-          <p>Respect de l'environnement et pratiques durables dans tous nos aménagements.</p>
+          <p>Respect de l'environnement et pratiques durables dans tous mes aménagements.</p>
         </div>
         
         <!-- Valeur 4 -->
@@ -121,7 +126,7 @@
         <div class="value-item fade-in">
           <div class="value-icon">❤️</div>
           <h4>Passion</h4>
-          <p>L'amour de notre métier se reflète dans chaque détail de nos créations.</p>
+          <p>L'amour de mon métier se reflète dans chaque détail de mes créations.</p>
         </div>
       </div>
     </div>
@@ -139,25 +144,25 @@
         <div class="service-item fade-in">
           <div class="service-icon">✅</div>
           <h3>Qualifications professionnelles</h3>
-          <p>Équipe formée et certifiée en paysagisme et horticulture</p>
+          <p>Je suis formé et certifié en paysagisme et horticulture</p>
         </div>
         
         <div class="service-item fade-in">
           <div class="service-icon">🛡️</div>
           <h3>Assurance décennale</h3>
-          <p>Tous nos travaux sont couverts par une assurance professionnelle</p>
+          <p>Tous mes travaux sont couverts par une assurance professionnelle</p>
         </div>
         
         <div class="service-item fade-in">
           <div class="service-icon">🌿</div>
           <h3>Label Éco-Jardin</h3>
-          <p>Nous respectons une charte de bonnes pratiques environnementales</p>
+          <p>Je respecte une charte de bonnes pratiques environnementales</p>
         </div>
         
         <div class="service-item fade-in">
           <div class="service-icon">⭐</div>
           <h3>Garantie satisfaction</h3>
-          <p>98% de clients satisfaits et fidèles depuis notre création</p>
+          <p>96% de clients satisfaits et fidèles depuis ma création</p>
         </div>
       </div>
     </div>
@@ -168,22 +173,17 @@
     <div class="container">
       <div class="stats-grid">
         <div class="stat-item fade-in">
-          <span class="stat-number">2010</span>
-          <span class="stat-label">Année de création</span>
-        </div>
-        
-        <div class="stat-item fade-in">
-          <span class="stat-number">350</span>
+          <span class="stat-number">85</span>
           <span class="stat-label">Projets réalisés</span>
         </div>
         
         <div class="stat-item fade-in">
-          <span class="stat-number">5</span>
-          <span class="stat-label">Professionnels qualifiés</span>
+          <span class="stat-number">1</span>
+          <span class="stat-label">Interlocuteur unique</span>
         </div>
         
         <div class="stat-item fade-in">
-          <span class="stat-number">15</span>
+          <span class="stat-number">6</span>
           <span class="stat-label">Années d'expérience</span>
         </div>
       </div>
@@ -199,45 +199,42 @@
     </div>
   </section>
   
-  <!-- ============ FOOTER ============ -->
+  </main>
+
+<!-- ============ FOOTER ============ -->
   <footer class="footer">
     <div class="container">
       <div class="footer-content">
+        <!-- Section 1 : À propos -->
         <div class="footer-section">
           <h3>Milliat Paysagiste</h3>
           <p>
-            Expert en aménagement paysager depuis 2010, nous créons et entretenons des jardins qui vous ressemblent.
+            Expert en aménagement paysager depuis 2020, je crée et entretiens des jardins qui vous ressemblent.
           </p>
-          <div class="social-links">
-            <a href="#" class="social-link" aria-label="Facebook">📘</a>
-            <a href="#" class="social-link" aria-label="Instagram">📷</a>
-            <a href="#" class="social-link" aria-label="LinkedIn">💼</a>
-          </div>
         </div>
         
+        <!-- Section 2 : Liens rapides -->
         <div class="footer-section">
           <h3>Liens rapides</h3>
           <div class="footer-links">
             <a href="index.html">Accueil</a>
             <a href="a-propos.html">À propos</a>
             <a href="services.html">Services</a>
-            <a href="realisations.html">Réalisations</a>
             <a href="contact.html">Contact</a>
           </div>
         </div>
         
+        <!-- Section 3 : Contact -->
         <div class="footer-section">
           <h3>Contact</h3>
-          <p>📍 123 Rue des Jardins<br>69000 Lyon, France</p>
-          <p>📞 04 12 34 56 78</p>
-          <p>✉️ contact@milliat-paysagiste.fr</p>
+          <p>✉️ milliat.paysage@gmail.com</p>
         </div>
         
+        <!-- Section 4 : Horaires -->
         <div class="footer-section">
           <h3>Horaires</h3>
           <p>Lundi - Vendredi<br>8h00 - 18h00</p>
-          <p>Samedi<br>9h00 - 12h00</p>
-          <p>Dimanche<br>Fermé</p>
+          <p>Samedi - dimanche<br>Fermé</p>
         </div>
       </div>
       

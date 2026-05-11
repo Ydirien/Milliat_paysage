@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
@@ -7,6 +7,13 @@
   <meta name="keywords" content="services paysagiste, aménagement jardin, entretien espaces verts, élagage, plantation">
   
   <title>Nos Services - Milliat Paysagiste | Aménagement & Entretien</title>
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Services - Milliat Paysagiste">
+  <meta property="og:description" content="Création de jardins, entretien d'espaces verts, plantation. Des prestations sur mesure pour tous vos projets paysagers.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/img/background.png">
+  <meta property="og:locale" content="fr_FR">
   
   <!-- Liens CSS -->
   <link rel="stylesheet" href="assets/css/style.css">
@@ -20,20 +27,17 @@
   <!-- ============ HEADER & NAVIGATION ============ -->
   <header class="header">
     <div class="container">
-      <nav class="navbar">
-        <a href="index.html" class="logo">
-          Milliat Paysagiste
-        </a>
+      <nav class="navbar" aria-label="Navigation principale">
+        <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="Milliat Paysagiste"></a>
         
         <ul class="nav-menu">
           <li><a href="index.html" class="nav-link">Accueil</a></li>
           <li><a href="a-propos.html" class="nav-link">À propos</a></li>
           <li><a href="services.html" class="nav-link active">Services</a></li>
-          <li><a href="realisations.html" class="nav-link">Réalisations</a></li>
           <li><a href="contact.html" class="nav-link btn btn-primary">Contact</a></li>
         </ul>
         
-        <button class="burger" aria-label="Menu">
+        <button class="burger" aria-label="Menu" aria-expanded="false">
           <span></span>
           <span></span>
           <span></span>
@@ -42,12 +46,13 @@
     </div>
   </header>
   
+  <main>
   <!-- ============ HERO SECTION ============ -->
   <section class="hero" style="height: 50vh; min-height: 400px;">
-    <img src="https://via.placeholder.com/1920x800/8fae8d/ffffff?text=Nos+Services" alt="Services de paysagisme" class="hero-bg">
+    <img src="./assets/img/background.png" alt="Services de paysagisme" class="hero-bg">
     <div class="hero-content">
       <h1>Nos services</h1>
-      <p>De la conception à l'entretien, nous gérons tous vos besoins paysagers</p>
+      <p>De la conception à l'entretien, je m'occupe de tous vos besoins paysagers</p>
     </div>
   </section>
   
@@ -62,7 +67,7 @@
       <div style="max-width: 800px; margin: 0 auto; text-align: center;">
         <p class="fade-in" style="font-size: 1.125rem; color: var(--color-gray);">
           Que vous souhaitiez créer un jardin de A à Z, rénover un espace existant ou assurer un entretien régulier, 
-          notre équipe de professionnels vous accompagne à chaque étape. Nous proposons des services adaptés aux 
+          je vous accompagne à chaque étape. Je propose des services adaptés aux 
           particuliers comme aux professionnels.
         </p>
       </div>
@@ -74,25 +79,21 @@
     <div class="container">
       <div class="about-content">
         <div class="about-image fade-in">
-          <img src="https://via.placeholder.com/600x500/2d5f3f/ffffff?text=Amenagement+Paysager" alt="Aménagement paysager">
+          <img src="./assets/img/service-1.png" alt="Aménagement paysager">
         </div>
         
         <div class="about-text fade-in">
           <h2>🌳 Création & Aménagement paysager</h2>
           <p>
-            Nous concevons et réalisons des jardins sur mesure qui correspondent à vos goûts, votre style de vie et votre budget. 
-            De la conception des plans jusqu'à la livraison finale, nous gérons l'intégralité de votre projet.
+            Je conçois et réalise des jardins sur mesure qui correspondent à vos goûts, votre style de vie et votre budget. 
+            De la conception des plans jusqu'à la livraison finale, je gère l'intégralité de votre projet.
           </p>
           
-          <h3>Ce que nous réalisons :</h3>
+          <h3>Ce que je réalise :</h3>
           <ul style="list-style: none; padding: 0;">
-            <li style="padding: 0.5rem 0; color: var(--color-gray);">✓ Conception de plans d'aménagement en 3D</li>
-            <li style="padding: 0.5rem 0; color: var(--color-gray);">✓ Création de jardins contemporains, classiques ou zen</li>
-            <li style="padding: 0.5rem 0; color: var(--color-gray);">✓ Terrasses en bois, pierre ou composite</li>
+            <li style="padding: 0.5rem 0; color: var(--color-gray);">✓ Création de jardins</li>
             <li style="padding: 0.5rem 0; color: var(--color-gray);">✓ Allées et cheminements piétonniers</li>
             <li style="padding: 0.5rem 0; color: var(--color-gray);">✓ Création de massifs floraux</li>
-            <li style="padding: 0.5rem 0; color: var(--color-gray);">✓ Installation de clôtures et portails</li>
-            <li style="padding: 0.5rem 0; color: var(--color-gray);">✓ Éclairage extérieur décoratif</li>
           </ul>
           
           <a href="contact.html" class="btn btn-primary" style="margin-top: 1rem;">Demander un devis</a>
@@ -109,10 +110,10 @@
           <h2>✂️ Entretien d'espaces verts</h2>
           <p>
             Un jardin demande de l'attention tout au long de l'année pour rester beau et en bonne santé. 
-            Nous proposons des contrats d'entretien adaptés à vos besoins et à votre budget.
+            Je propose des contrats d'entretien adaptés à vos besoins et à votre budget.
           </p>
           
-          <h3>Nos prestations d'entretien :</h3>
+          <h3>Mes prestations d'entretien :</h3>
           <ul style="list-style: none; padding: 0;">
             <li style="padding: 0.5rem 0; color: var(--color-gray);">✓ Tonte de pelouse et scarification</li>
             <li style="padding: 0.5rem 0; color: var(--color-gray);">✓ Taille de haies et arbustes</li>
@@ -124,111 +125,45 @@
           
           <p style="background-color: var(--color-beige); padding: 1rem; border-radius: var(--radius-md); margin-top: 1rem;">
             <strong>💡 Contrats annuels disponibles</strong><br>
-            Bénéficiez de tarifs préférentiels avec nos formules d'entretien à l'année.
+            Bénéficiez de tarifs préférentiels avec mes formules d'entretien à l'année.
           </p>
         </div>
         
         <div class="about-image fade-in" style="order: 2;">
-          <img src="https://via.placeholder.com/600x500/6b9071/ffffff?text=Entretien+Jardins" alt="Entretien de jardins">
+          <img src="./assets/img/service-2.jpg" alt="Entretien de jardins">
         </div>
       </div>
     </div>
   </section>
   
-  <!-- ============ SERVICE 3 : ÉLAGAGE ============ -->
-  <section class="section" style="background-color: var(--color-beige);">
-    <div class="container">
-      <div class="about-content">
-        <div class="about-image fade-in">
-          <img src="https://via.placeholder.com/600x500/8fae8d/ffffff?text=Elagage+Arbres" alt="Élagage d'arbres">
-        </div>
-        
-        <div class="about-text fade-in">
-          <h2>🪚 Élagage et abattage</h2>
-          <p>
-            L'élagage est essentiel pour la santé et la sécurité de vos arbres. Nos élagueurs certifiés 
-            interviennent avec le matériel adapté pour tous types d'arbres, en hauteur ou difficiles d'accès.
-          </p>
-          
-          <h3>Nos interventions :</h3>
-          <ul style="list-style: none; padding: 0;">
-            <li style="padding: 0.5rem 0; color: var(--color-gray);">✓ Taille douce et d'entretien</li>
-            <li style="padding: 0.5rem 0; color: var(--color-gray);">✓ Élagage de grands arbres</li>
-            <li style="padding: 0.5rem 0; color: var(--color-gray);">✓ Abattage avec ou sans rétention</li>
-            <li style="padding: 0.5rem 0; color: var(--color-gray);">✓ Rognage de souches</li>
-            <li style="padding: 0.5rem 0; color: var(--color-gray);">✓ Évacuation des déchets verts</li>
-          </ul>
-          
-          <p style="background-color: #fff3cd; padding: 1rem; border-radius: var(--radius-md); margin-top: 1rem; border-left: 4px solid #ffc107;">
-            <strong>⚠️ Sécurité avant tout</strong><br>
-            Tous nos élagueurs sont formés et équipés selon les normes de sécurité en vigueur.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <!-- ============ SERVICE 4 : PLANTATION ============ -->
+  <!-- ============ SERVICE 3 : PLANTATION ============ -->
   <section class="section">
     <div class="container">
       <div class="about-content">
-        <div class="about-text fade-in" style="order: 1;">
+        <div class="about-image fade-in" style="order: 1;">
+          <img src="./assets/img/service-3.jpg" alt="Plantation de végétaux">
+        </div>
+
+        <div class="about-text fade-in" style="order: 2;">
           <h2>🌱 Plantation et végétalisation</h2>
           <p>
-            Le choix des végétaux est crucial pour la réussite d'un jardin. Nous sélectionnons des plantes 
+            Le choix des végétaux est crucial pour la réussite d'un jardin. Je sélectionne des plantes 
             adaptées à votre sol, votre exposition et vos envies, pour un résultat esthétique et durable.
           </p>
           
-          <h3>Notre expertise :</h3>
+          <h3>Mon expertise :</h3>
           <ul style="list-style: none; padding: 0;">
             <li style="padding: 0.5rem 0; color: var(--color-gray);">✓ Plantation d'arbres et arbustes</li>
             <li style="padding: 0.5rem 0; color: var(--color-gray);">✓ Création de massifs floraux</li>
             <li style="padding: 0.5rem 0; color: var(--color-gray);">✓ Plantation de haies champêtres ou persistantes</li>
             <li style="padding: 0.5rem 0; color: var(--color-gray);">✓ Végétalisation de talus</li>
             <li style="padding: 0.5rem 0; color: var(--color-gray);">✓ Potagers décoratifs et carrés potagers</li>
-            <li style="padding: 0.5rem 0; color: var(--color-gray);">✓ Gazon en rouleaux ou semis</li>
+            <li style="padding: 0.5rem 0; color: var(--color-gray);">✓ Semis de gazon</li>
           </ul>
           
           <p style="background-color: #d4edda; padding: 1rem; border-radius: var(--radius-md); margin-top: 1rem; border-left: 4px solid #28a745;">
             <strong>🌿 Approche écologique</strong><br>
-            Nous privilégions les espèces locales et résistantes, pour un jardin respectueux de la biodiversité.
-          </p>
-        </div>
-        
-        <div class="about-image fade-in" style="order: 2;">
-          <img src="https://via.placeholder.com/600x500/2d5f3f/ffffff?text=Plantation" alt="Plantation de végétaux">
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <!-- ============ SERVICE 5 : ARROSAGE AUTOMATIQUE ============ -->
-  <section class="section" style="background-color: var(--color-light-gray);">
-    <div class="container">
-      <div class="about-content">
-        <div class="about-image fade-in">
-          <img src="https://via.placeholder.com/600x500/6b9071/ffffff?text=Arrosage+Automatique" alt="Système d'arrosage automatique">
-        </div>
-        
-        <div class="about-text fade-in">
-          <h2>💧 Arrosage automatique</h2>
-          <p>
-            Un système d'arrosage bien conçu permet d'économiser l'eau tout en garantissant la santé de vos plantes. 
-            Nous installons des systèmes intelligents et programmables adaptés à votre jardin.
-          </p>
-          
-          <h3>Nos solutions :</h3>
-          <ul style="list-style: none; padding: 0;">
-            <li style="padding: 0.5rem 0; color: var(--color-gray);">✓ Arrosage automatique enterré</li>
-            <li style="padding: 0.5rem 0; color: var(--color-gray);">✓ Goutte-à-goutte pour massifs et potagers</li>
-            <li style="padding: 0.5rem 0; color: var(--color-gray);">✓ Programmateurs et minuteries</li>
-            <li style="padding: 0.5rem 0; color: var(--color-gray);">✓ Récupération d'eau de pluie</li>
-            <li style="padding: 0.5rem 0; color: var(--color-gray);">✓ Maintenance et dépannage</li>
-          </ul>
-          
-          <p style="background-color: var(--color-beige); padding: 1rem; border-radius: var(--radius-md); margin-top: 1rem;">
-            <strong>💰 Économies garanties</strong><br>
-            Un arrosage automatique bien réglé permet d'économiser jusqu'à 50% d'eau par rapport à un arrosage manuel.
+            Je privilégie les espèces locales et résistantes, pour un jardin respectueux de la biodiversité.
           </p>
         </div>
       </div>
@@ -250,8 +185,8 @@
             <div style="font-size: 3rem; margin-bottom: 1rem;">1️⃣</div>
             <h3 class="card-title">Contact & Devis</h3>
             <p class="card-text">
-              Vous nous contactez, nous fixons un rendez-vous pour étudier votre projet. 
-              Devis gratuit et sans engagement sous 48h.
+              Vous me contactez, je fixe un rendez-vous pour étudier votre projet. 
+              Devis gratuit et sans engagement sous 72h.
             </p>
           </div>
         </div>
@@ -262,8 +197,7 @@
             <div style="font-size: 3rem; margin-bottom: 1rem;">2️⃣</div>
             <h3 class="card-title">Conception</h3>
             <p class="card-text">
-              Notre paysagiste conçoit un plan détaillé avec sélection des végétaux et matériaux. 
-              Visualisation 3D si besoin.
+              Je conçois un plan détaillé avec sélection des végétaux et matériaux.
             </p>
           </div>
         </div>
@@ -274,7 +208,7 @@
             <div style="font-size: 3rem; margin-bottom: 1rem;">3️⃣</div>
             <h3 class="card-title">Réalisation</h3>
             <p class="card-text">
-              Une fois le projet validé, notre équipe intervient selon le planning défini. 
+              Une fois le projet validé, j'interviens selon le planning défini. 
               Chantier propre et soigné.
             </p>
           </div>
@@ -286,8 +220,8 @@
             <div style="font-size: 3rem; margin-bottom: 1rem;">4️⃣</div>
             <h3 class="card-title">Suivi</h3>
             <p class="card-text">
-              Nous restons à votre disposition après les travaux pour conseils et entretien. 
-              Garantie sur nos prestations.
+              Je reste à votre disposition après les travaux pour conseils et entretien. 
+              Garantie sur mes prestations.
             </p>
           </div>
         </div>
@@ -299,50 +233,47 @@
   <section class="cta-section">
     <div class="container">
       <h2>Un projet en tête ?</h2>
-      <p>Demandez votre devis gratuit et personnalisé. Nous vous répondons sous 48h.</p>
+      <p>Demandez votre devis gratuit et personnalisé. Je vous réponds sous 48h.</p>
       <a href="contact.html" class="btn">Demander un devis</a>
     </div>
   </section>
   
-  <!-- ============ FOOTER ============ -->
+  </main>
+
+<!-- ============ FOOTER ============ -->
   <footer class="footer">
     <div class="container">
       <div class="footer-content">
+        <!-- Section 1 : À propos -->
         <div class="footer-section">
           <h3>Milliat Paysagiste</h3>
           <p>
-            Expert en aménagement paysager depuis 2010, nous créons et entretenons des jardins qui vous ressemblent.
+            Expert en aménagement paysager depuis 2020, je crée et entretiens des jardins qui vous ressemblent.
           </p>
-          <div class="social-links">
-            <a href="#" class="social-link" aria-label="Facebook">📘</a>
-            <a href="#" class="social-link" aria-label="Instagram">📷</a>
-            <a href="#" class="social-link" aria-label="LinkedIn">💼</a>
-          </div>
         </div>
         
+        <!-- Section 2 : Liens rapides -->
         <div class="footer-section">
           <h3>Liens rapides</h3>
           <div class="footer-links">
             <a href="index.html">Accueil</a>
             <a href="a-propos.html">À propos</a>
             <a href="services.html">Services</a>
-            <a href="realisations.html">Réalisations</a>
             <a href="contact.html">Contact</a>
           </div>
         </div>
         
+        <!-- Section 3 : Contact -->
         <div class="footer-section">
           <h3>Contact</h3>
-          <p>📍 123 Rue des Jardins<br>69000 Lyon, France</p>
-          <p>📞 04 12 34 56 78</p>
-          <p>✉️ contact@milliat-paysagiste.fr</p>
+          <p>✉️ milliat.paysage@gmail.com</p>
         </div>
         
+        <!-- Section 4 : Horaires -->
         <div class="footer-section">
           <h3>Horaires</h3>
           <p>Lundi - Vendredi<br>8h00 - 18h00</p>
-          <p>Samedi<br>9h00 - 12h00</p>
-          <p>Dimanche<br>Fermé</p>
+          <p>Samedi - dimanche<br>Fermé</p>
         </div>
       </div>
       
