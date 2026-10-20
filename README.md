@@ -38,7 +38,8 @@ npm run build
 - `src/_includes/partials` : en-tête et pied de page ;
 - `src/_data/site.json` : informations globales, communes desservies, téléphone et navigation ;
 - `src/_data/images.js` : helper `images.img()` qui produit les balises `<img>` avec `srcset` ;
-- `src/.htaccess` : redirections, cache, compression et en-têtes Apache ;
+- `src/htaccess.ejs` : template du `.htaccess` (redirections, cache, compression, en-têtes et CSP avec l’empreinte du CSS) ;
+- `src/_data/assets.js` : CSS intégré aux pages, son empreinte et les URL versionnées des fichiers statiques ;
 - `src/assets` : CSS, JavaScript et images générées ;
 - `scripts/optimize-images.mjs` : pipeline Sharp vers WebP ;
 - `scripts/check-build.mjs` : contrôles de compilation ;

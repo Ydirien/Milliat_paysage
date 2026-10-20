@@ -96,9 +96,10 @@ if (header) {
 const revealItems = document.querySelectorAll("[data-reveal]");
 if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
   // Les éléments visibles dès le chargement ne sont pas masqués, pour ne pas retarder l'affichage principal (LCP)
-  revealItems.forEach((item) => {
-    if (item.getBoundingClientRect().top < window.innerHeight) item.setAttribute("data-visible", "");
-  });
+  // Toutes les lectures de position avant les écritures, pour ne calculer la mise en page qu'une fois
+  const viewportHeight = window.innerHeight;
+  const visibleOnLoad = [...revealItems].filter((item) => item.getBoundingClientRect().top < viewportHeight);
+  visibleOnLoad.forEach((item) => item.setAttribute("data-visible", ""));
   document.documentElement.classList.add("has-motion");
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {

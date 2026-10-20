@@ -7,7 +7,7 @@ permalink: index.html
 <% const cardSizes = '(min-width: 861px) 380px, calc(100vw - 2rem)'; const projectSizes = '(min-width: 1200px) 570px, (min-width: 581px) 50vw, calc(100vw - 2rem)'; %>
 <section class="garden-hero">
   <div class="garden-hero__media">
-    <%- images.img('jardin-entretenu', { alt: 'Jardin entretenu avec pelouse, haies et massifs fleuris', sizes: '100vw', loading: 'eager', fetchpriority: 'high' }) %>
+    <%- images.img('jardin-entretenu', { alt: 'Jardin entretenu avec pelouse, haies et massifs fleuris', sizes: '(max-width: 760px) 760px, 100vw', loading: 'eager', fetchpriority: 'high' }) %>
   </div>
   <div class="shell garden-hero__inner">
     <div class="garden-hero__card">

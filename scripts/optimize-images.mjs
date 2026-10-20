@@ -18,13 +18,19 @@ const images = [
 ];
 // Largeurs cibles, plafonnées à la largeur réelle de la source pour ne jamais annoncer une variante agrandie.
 // 1024 px suffit : aucune image n'est affichée à plus de 1024 px de large, même sur un écran 3x.
-const widths = [480, 768, 1024];
+// Le palier 640 correspond aux cartes affichées en 390 px sur les mobiles de densité 1,75.
+const widths = [480, 640, 768, 1024];
 // Les photos très verticales sont recadrées en 4:5. Les emplacements les affichent en object-fit cover
 // dans un cadre plus large que 4:5, la partie retirée n'était donc jamais visible.
 const maxPortraitRatio = 1.25;
 const uncropped = new Set(["alexis-milliat-paysagiste.jpg"]);
 // Les grandes variantes ne servent qu'aux écrans haute densité, où une compression plus forte ne se voit pas
 const quality = (width) => (width <= 480 ? 72 : width <= 768 ? 64 : 58);
+// Chaque variante existe en AVIF (environ 40 % plus léger) et en WebP pour les navigateurs qui ne lisent pas l'AVIF
+const encoders = {
+  avif: (image, width) => image.avif({ quality: quality(width) - 16, effort: 4 }),
+  webp: (image, width) => image.webp({ quality: quality(width), effort: 6, smartSubsample: true })
+};
 const ogImages = ["jardin-entretenu.png", "amenagement-paysager.jpg", "tonte-pelouse.png"];
 const logoSource = path.join(sourceDir, "logo-milliat-v2.png");
 const expected = new Set();
@@ -68,20 +74,26 @@ for (const filename of images) {
   if (!targets.length || targets.at(-1) < Math.min(sourceWidth, widths.at(-1))) targets.push(Math.min(sourceWidth, widths.at(-1)));
 
   for (const width of targets) {
-    await generate(source, `${stem}-${width}.webp`, (image) => image
-      .rotate()
-      .resize(crop
-        ? { width, height: Math.round(width * maxPortraitRatio), fit: "cover", position: "centre" }
-        : { width, withoutEnlargement: true })
-      .webp({ quality: quality(width), effort: 6, smartSubsample: true }));
+    for (const [format, encode] of Object.entries(encoders)) {
+      await generate(source, `${stem}-${width}.${format}`, (image) => encode(image
+        .rotate()
+        .resize(crop
+          ? { width, height: Math.round(width * maxPortraitRatio), fit: "cover", position: "centre" }
+          : { width, withoutEnlargement: true }), width));
 
-    // Variante 3:2 pour les emplacements paysage (cartes, grilles, page Services sur mobile)
-    if (uncropped.has(filename)) continue;
-    await generate(source, `${stem}-wide-${width}.webp`, (image) => image
-      .rotate()
-      .resize({ width, height: Math.round(width / 1.5), fit: "cover", position: "centre" })
-      .webp({ quality: quality(width), effort: 6, smartSubsample: true }));
+      // Variante 3:2 pour les emplacements paysage (cartes, grilles, page Services sur mobile)
+      if (uncropped.has(filename)) continue;
+      await generate(source, `${stem}-wide-${width}.${format}`, (image) => encode(image
+        .rotate()
+        .resize({ width, height: Math.round(width / 1.5), fit: "cover", position: "centre" }), width));
+    }
   }
+}
+
+// Logo de l'en-tête et du pied de page, affiché entre 44 et 58 px de large
+for (const width of [128, 256]) {
+  await generate(logoSource, `logo-milliat-v2-${width}.avif`, (image) => image.resize({ width }).avif({ quality: 60, effort: 4 }));
+  await generate(logoSource, `logo-milliat-v2-${width}.webp`, (image) => image.resize({ width }).webp({ quality: 90, effort: 6 }));
 }
 
 // Images de partage au format recommandé par Open Graph (1200 × 630, JPEG)
@@ -92,6 +104,7 @@ for (const filename of ogImages) {
     .jpeg({ quality: 80, mozjpeg: true }));
 }
 
+// Version 320 px pour le filigrane des en-têtes de page et les données structurées
 await generate(logoSource, "logo-milliat-v2.webp", (image) => image
   .resize({ width: 320, withoutEnlargement: true })
   .webp({ quality: 92, effort: 5 }));

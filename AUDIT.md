@@ -152,6 +152,35 @@ Contrôles réalisés : relecture du code, `npm audit`, requêtes sur le serveu
 - vérifier l’existence de `contact@milliatpaysage.fr` ;
 - fournir une photo d’accueil d’au moins 1920 px de large (la source actuelle fait 1024 px).
 
+## Performance
+
+### Audit du 20 octobre 2026 : corrigé
+
+Mesures Lighthouse 12.8 (médiane de 3 passages, mobile Moto G et 4G lente, puis ralentissement réellement appliqué), sur un serveur local reproduisant la compression et le cache du `.htaccess`.
+
+| Page | Score mobile avant → après | Poids mobile avant → après |
+|---|---|---|
+| Accueil | 96 → 99 | 471 → 283 Ko |
+| Services | 100 → 100 | 313 → 185 Ko |
+| Réalisations | 93 → 99 | 567 → 316 Ko |
+| Contact | 100 → 100 | 27 → 29 Ko |
+
+Pour comparaison, l’accueil du site en ligne au 20 octobre 2026 obtient 53 sur mobile, avec un LCP de 13,8 s et 16 Mo.
+
+- image principale de l’accueil : `sizes` corrigé pour son cadrage en `object-fit: cover` (elle était étirée 1,7 fois sur mobile) ;
+- AVIF en priorité avec repli WebP (`<picture>`), environ 40 % plus léger ;
+- palier de 640 px pour les mobiles de densité 1,75 ;
+- CSS intégré aux pages (4,3 Ko compressé) autorisé par son empreinte dans la CSP : le premier affichage n’attend plus de fichier externe, FCP mobile de 1,8 à 1,2 s avec ralentissement appliqué ;
+- cache d’un an pour les images et le JS versionnés par l’empreinte de leur contenu, au lieu d’un horodatage de build qui invalidait le cache à chaque déploiement ;
+- Réalisations : `fetchpriority="high"` sur l’image LCP, chargement différé des autres ; Services : chargement différé de la première image, qui n’est pas l’élément LCP ;
+- logo en 128 et 256 px au lieu de 320 px ;
+- lecture des positions regroupée avant les écritures dans l’animation d’apparition (plus de recalcul forcé de la mise en page).
+
+### Reste à faire
+
+- fournir une photo d’accueil d’au moins 1920 px de large : la source actuelle (1024 px) reste agrandie sur ordinateur et sur mobile haute densité ;
+- après la mise en ligne en HTTPS (HTTP/2 et TLS 1.3 sont disponibles chez o2switch), mesurer avec PageSpeed Insights.
+
 ## Références utilisées
 
 - Eleventy : https://www.11ty.dev/docs/languages/ejs/

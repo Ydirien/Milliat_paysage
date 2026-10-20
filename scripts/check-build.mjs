@@ -1,7 +1,10 @@
+import crypto from "node:crypto";
 import fs from "node:fs/promises";
 import path from "node:path";
 
 const siteUrl = "https://milliatpaysage.fr";
+const htaccess = await fs.readFile(path.resolve("_site", ".htaccess"), "utf8");
+const cspStyles = htaccess.match(/Content-Security-Policy "[^"]*style-src ([^;"]+)/)?.[1] || "";
 const pages = [
   "index.html",
   "services.html",
@@ -72,9 +75,16 @@ for (const page of pages) {
 
       for (const match of source.matchAll(/(?:src|href)="(\/[^"]*)"/g)) await assertExists(match[1]);
 
-      // La Content-Security-Policy du .htaccess interdit les styles et scripts inline
+      // La Content-Security-Policy du .htaccess n'autorise que le CSS intégré dont elle connaît l'empreinte
       if (/\sstyle="/.test(source)) throw new Error("attribut style inline (bloqué par la CSP)");
-      if (/<style[\s>]/.test(source)) throw new Error("balise style inline (bloquée par la CSP)");
+      const styles = [...source.matchAll(/<style>([\s\S]*?)<\/style>/g)];
+      if (styles.length !== 1) throw new Error("le CSS du site doit être intégré une seule fois");
+      const styleHash = `'sha256-${crypto.createHash("sha256").update(styles[0][1]).digest("base64")}'`;
+      if (!cspStyles.includes(styleHash)) throw new Error("l’empreinte du CSS intégré ne correspond pas à la CSP du .htaccess");
+      if (/<link rel="stylesheet"/.test(source)) throw new Error("feuille de style externe bloquante");
+      for (const picture of source.matchAll(/<picture>([\s\S]*?)<\/picture>/g)) {
+        if (!picture[1].includes('type="image/avif"')) throw new Error("image sans source AVIF");
+      }
       if (/\son[a-z]+="/.test(source)) throw new Error("gestionnaire d’événement inline (bloqué par la CSP)");
       for (const match of source.matchAll(/<script\b([^>]*)>([\s\S]*?)<\/script>/g)) {
         if (match[2].trim() && !/type="application\/ld\+json"/.test(match[1])) throw new Error("script inline (bloqué par la CSP)");
