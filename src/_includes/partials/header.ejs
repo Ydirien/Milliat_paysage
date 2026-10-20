@@ -1,0 +1,20 @@
+<header class="site-header" data-header>
+  <div class="shell header-inner">
+    <a class="brand" href="/" aria-label="Milliat Paysage, accueil">
+      <img src="/assets/images/generated/logo-milliat-v2.webp" width="64" height="54" alt="">
+      <span><strong>Milliat</strong><small>Paysage</small></span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-menu" aria-label="Ouvrir le menu" data-menu-toggle>
+      <span class="menu-toggle__label">Menu</span>
+      <span class="menu-toggle__icon" aria-hidden="true"><i></i><i></i></span>
+    </button>
+    <nav id="main-menu" class="main-nav" aria-label="Navigation principale" data-menu>
+      <ul role="list">
+        <% site.nav.forEach(item => { %>
+        <li><a href="<%= item.url %>"<% if (page.url === item.url) { %> aria-current="page"<% } %>><%= item.label %></a></li>
+        <% }) %>
+      </ul>
+      <a class="button button--small" href="/contact.html">Demander un devis</a>
+    </nav>
+  </div>
+</header>

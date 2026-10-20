@@ -1,0 +1,81 @@
+---
+layout: layouts/base.ejs
+title: Entretien et aménagement de jardin à Altkirch | Milliat Paysage
+description: Tonte, taille de haies, plantation, création de massifs et aménagement de jardin autour d’Altkirch, dans le Sundgau. Devis gratuit et détaillé.
+ogImage: amenagement-paysager
+ogImageAlt: Création d’un aménagement paysager
+permalink: services.html
+---
+<% const detailSizes = '(min-width: 861px) 460px, calc(100vw - 2rem)'; %>
+<header class="page-hero">
+  <div class="shell page-hero__grid">
+    <div><span class="kicker">Les prestations</span><h1>Entretien et aménagement de jardin autour d’Altkirch</h1></div>
+    <p>Choisissez les travaux dont votre jardin a besoin. Je peux remettre votre jardin au propre en une fois, revenir régulièrement ou prendre en charge un nouvel aménagement. Vous payez uniquement les travaux prévus dans le devis.</p>
+  </div>
+</header>
+
+<section class="section">
+  <div class="shell">
+    <article class="service-detail" id="amenagement">
+      <div class="service-detail__image" data-reveal><%- images.img('amenagement-paysager', { alt: 'Création d’un aménagement paysager', sizes: detailSizes, loading: 'eager', fallbackWidth: 768, wideBelow: 861 }) %></div>
+      <div class="service-detail__copy" data-reveal>
+        <span class="kicker">Créer ou réorganiser</span>
+        <h2>Aménagement paysager</h2>
+        <p>Votre jardin est vide, difficile à parcourir ou composé de zones inutilisées ? Je réorganise l’espace pour faciliter les déplacements et rendre chaque partie du terrain agréable à utiliser.</p>
+        <p>Je vérifie les niveaux, les accès et la nature du sol avant de vous proposer un aménagement réaliste pour votre budget.</p>
+        <ul class="task-list" role="list"><li>Création de jardin</li><li>Allées piétonnes</li><li>Création de massifs</li><li>Préparation du sol</li></ul>
+      </div>
+    </article>
+
+    <article class="service-detail" id="plantation">
+      <div class="service-detail__image" data-reveal><%- images.img('vegetaux-plantation', { alt: 'Végétaux préparés pour une plantation', sizes: detailSizes, fallbackWidth: 768, wideBelow: 861 }) %></div>
+      <div class="service-detail__copy" data-reveal>
+        <span class="kicker">Planter au bon endroit</span>
+        <h2>Plantation et végétalisation</h2>
+        <p>Une plante mal placée pousse difficilement ou demande beaucoup trop d’entretien. Je choisis les végétaux selon le sol, l’exposition et la place dont ils disposeront une fois adultes.</p>
+        <p>Vous obtenez un ensemble cohérent qui conserve son intérêt au fil des saisons sans devenir une contrainte.</p>
+        <ul class="task-list" role="list"><li>Arbres et arbustes</li><li>Haies champêtres ou persistantes</li><li>Massifs fleuris</li><li>Talus et couvre-sols</li><li>Carrés potagers</li><li>Semis de gazon</li></ul>
+      </div>
+    </article>
+
+    <article class="service-detail" id="entretien">
+      <div class="service-detail__image" data-reveal><%- images.img('entretien-jardin-arbore', { alt: 'Travail d’entretien dans un jardin arboré', sizes: detailSizes, fallbackWidth: 768, wideBelow: 861 }) %></div>
+      <div class="service-detail__copy" data-reveal>
+        <span class="kicker">Ponctuellement ou à l’année</span>
+        <h2>Entretien des espaces verts</h2>
+        <p>Demandez une remise en état, un passage pour une tâche précise ou un entretien régulier. Je m’occupe des travaux lourds et répétitifs pour que vous profitiez du jardin au lieu de courir après son entretien.</p>
+        <ul class="task-list" role="list"><li>Tonte de pelouse</li><li>Scarification</li><li>Taille de haies et arbustes</li><li>Désherbage et binage</li><li>Ramassage des feuilles</li><li>Nettoyage d’allées et terrasses</li></ul>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="section section--cream" aria-labelledby="zone-titre">
+  <div class="shell">
+    <div class="section-heading"><div><span class="kicker">Zone d’intervention</span><h2 id="zone-titre">Paysagiste à Altkirch et dans le Sundgau</h2></div><p class="lede">J’interviens dans un rayon d’environ 30 kilomètres autour d’Altkirch, dans le Haut-Rhin. Votre commune ne figure pas dans la liste ? Précisez-la dans votre demande de devis.</p></div>
+    <ul class="task-list" role="list">
+      <% site.communes.forEach(commune => { %><li><%= commune %></li><% }) %>
+    </ul>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="faq-titre">
+  <div class="shell">
+    <div class="section-heading"><div><span class="kicker">Questions fréquentes</span><h2 id="faq-titre">Avant de demander votre devis</h2></div></div>
+    <div class="values">
+      <article class="value"><h3>Le devis est-il gratuit ?</h3><p>Oui. Le devis est gratuit et ne vous engage pas. Il détaille les travaux et les fournitures avant le début du chantier.</p></article>
+      <article class="value"><h3>Faut-il une visite avant le devis ?</h3><p>Pas toujours. Envoyez quelques photos du terrain et je vous dirai rapidement si une visite est nécessaire pour mesurer les surfaces et vérifier les accès.</p></article>
+      <article class="value"><h3>Que deviennent les déchets de coupe ?</h3><p>Je ramasse les déchets de coupe et remets les zones travaillées au propre après chaque intervention.</p></article>
+      <article class="value"><h3>Proposez-vous un entretien régulier ?</h3><p>Oui. Vous pouvez demander un passage ponctuel, une remise en état complète ou un entretien régulier de votre jardin.</p></article>
+      <article class="value"><h3>Sous quel délai répondez-vous ?</h3><p>Vous recevez un premier retour sous 48h ouvrées, du lundi au vendredi de 8h à 18h.</p></article>
+      <article class="value"><h3>Qui réalise les travaux ?</h3><p>Alexis Milliat prépare le devis et réalise lui-même le chantier. Vous gardez le même interlocuteur du premier échange aux finitions.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="section section--cream">
+  <div class="shell">
+    <div class="section-heading"><div><span class="kicker">Votre devis</span><h2>Recevez un prix adapté au travail réel.</h2></div><p class="lede">La surface, les accès, le volume à évacuer et les fournitures influencent le prix. Envoyez quelques photos et je vous dirai rapidement si une visite est nécessaire.</p></div>
+    <a class="button" href="/contact.html">Obtenir un devis gratuit</a>
+  </div>
+</section>

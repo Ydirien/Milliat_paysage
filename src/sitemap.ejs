@@ -1,0 +1,13 @@
+---
+permalink: sitemap.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <% collections.all
+    .filter(item => !String(item.data.robots || '').includes('noindex'))
+    .sort((a, b) => (a.url === '/' ? -1 : b.url === '/' ? 1 : a.url.localeCompare(b.url)))
+    .forEach(item => { -%>
+  <url><loc><%= site.url + item.url %></loc></url>
+  <% }) -%>
+</urlset>

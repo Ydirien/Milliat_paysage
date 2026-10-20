@@ -1,0 +1,37 @@
+<footer class="site-footer">
+  <div class="shell footer-grid">
+    <div class="footer-intro">
+      <a class="footer-brand" href="/"><img src="/assets/images/generated/logo-milliat-v2.webp" width="72" height="62" alt=""><span>Milliat Paysage</span></a>
+      <p>Création et entretien de jardins<br>autour d’Altkirch, dans le Sundgau (Haut-Rhin).</p>
+    </div>
+    <div>
+      <h2>Explorer</h2>
+      <ul role="list">
+        <li><a href="/services.html">Services</a></li>
+        <li><a href="/realisations.html">Réalisations</a></li>
+        <li><a href="/a-propos.html">À propos</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Coordonnées</h2>
+      <p><strong>Zone d’intervention</strong><br><%= site.area %></p>
+      <p><strong>Siège social</strong><br><%= site.streetAddress %><br><%= site.postalCode %> <%= site.addressLocality %></p>
+      <% if (site.telephone) { %><p><a href="tel:<%= site.telephone.replace(/\s/g, '').replace(/^0/, '+33') %>"><%= site.telephone %></a></p><% } %>
+      <p><a href="mailto:<%= site.email %>"><%= site.email %></a></p>
+      <p><%= site.hours.label %></p>
+    </div>
+    <div>
+      <h2>Informations</h2>
+      <ul role="list">
+        <li><a href="/mentions-legales.html">Mentions légales</a></li>
+        <li><a href="/politique-confidentialite.html">Confidentialité</a></li>
+        <li><a href="/plan-du-site.html">Plan du site</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="shell footer-bottom">
+    <p>© <%= new Date().getFullYear() %> <%= site.name %></p>
+    <p>Site conçu par <a href="https://rocketone.dev" rel="external">Rocket One</a></p>
+  </div>
+</footer>

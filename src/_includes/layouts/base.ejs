@@ -1,0 +1,52 @@
+<%
+const robotsValue = typeof robots !== 'undefined' ? robots : 'index,follow,max-image-preview:large';
+const indexable = !robotsValue.includes('noindex');
+const pageDescription = description || site.description;
+const pageUrl = site.url + page.url;
+const og = {
+  stem: typeof ogImage !== 'undefined' ? ogImage : site.ogImage.stem,
+  alt: typeof ogImageAlt !== 'undefined' ? ogImageAlt : site.ogImage.alt
+};
+const ogUrl = site.url + '/assets/images/generated/' + og.stem + '-og.jpg';
+%><!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title><%= title %></title>
+  <meta name="description" content="<%= pageDescription %>">
+  <meta name="robots" content="<%= robotsValue %>">
+  <% if (indexable) { %><link rel="canonical" href="<%= pageUrl %>">
+  <% } %><meta name="author" content="<%= site.name %>">
+  <meta name="theme-color" content="#173c2d">
+  <link rel="stylesheet" href="/assets/css/site.css?v=<%= build.version %>">
+  <link rel="icon" href="/assets/images/generated/favicon-48.png" sizes="48x48" type="image/png">
+  <link rel="icon" href="/assets/images/generated/favicon-96.png" sizes="96x96" type="image/png">
+  <link rel="icon" href="/assets/images/generated/favicon-192.png" sizes="192x192" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/images/generated/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="<%= site.name %>">
+  <meta property="og:title" content="<%= title %>">
+  <meta property="og:description" content="<%= pageDescription %>">
+  <meta property="og:url" content="<%= pageUrl %>">
+  <meta property="og:image" content="<%= ogUrl %>">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="<%= og.alt %>">
+  <meta name="twitter:card" content="summary_large_image">
+  <% if (page.url === '/') { %><%- include('../partials/schema.ejs') %><% } %>
+</head>
+<body>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <%- include('../partials/header.ejs') %>
+  <main id="contenu" tabindex="-1">
+    <%- content %>
+  </main>
+  <%- include('../partials/footer.ejs') %>
+  <script src="/assets/js/site.js?v=<%= build.version %>" defer></script>
+  <% if (page.url === '/contact.html') { %><script src="/assets/js/form.js?v=<%= build.version %>" defer></script><% } %>
+</body>
+</html>

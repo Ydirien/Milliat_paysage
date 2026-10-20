@@ -1,0 +1,21 @@
+name: Build et contrôles
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - run: npm test
+      - name: Syntaxe PHP
+        run: php -l send-mail.php
+      - name: Vulnérabilités des dépendances
+        run: npm audit --audit-level=high

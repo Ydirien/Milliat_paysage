@@ -1,0 +1,30 @@
+---
+layout: layouts/base.ejs
+title: Travaux de jardin autour d’Altkirch | Milliat Paysage
+description: Photos de tonte, taille de haies, plantation et entretien de jardins réalisés autour d’Altkirch, dans le Sundgau. Demandez votre devis gratuit.
+ogImage: tonte-pelouse
+ogImageAlt: Pelouse tondue avec bandes régulières
+permalink: realisations.html
+---
+<% const portfolioSizes = '(min-width: 1200px) 375px, (min-width: 861px) 33vw, (min-width: 581px) 50vw, calc(100vw - 2rem)'; %>
+<header class="page-hero">
+  <div class="shell page-hero__grid">
+    <div><span class="kicker">Photos de terrain</span><h1>Réalisations de jardins dans le Sundgau</h1></div>
+    <p>Voyez ce que donne un travail soigné. Découvrez des travaux de tonte, de taille, de plantation et d’entretien réalisés sur le terrain autour d’Altkirch.</p>
+  </div>
+</header>
+
+<section class="section">
+  <div class="shell">
+    <div class="project-grid project-grid--portfolio">
+      <figure class="project" data-reveal><%- images.img('tonte-pelouse', { alt: 'Pelouse tondue avec bandes régulières', sizes: portfolioSizes, loading: 'eager', fallbackWidth: 768, wide: true }) %><figcaption>Tonte de pelouse<span>Coupe régulière et reprise des bordures</span></figcaption></figure>
+      <figure class="project" data-reveal><%- images.img('taille-haie', { alt: 'Haie taillée de façon uniforme', sizes: portfolioSizes, loading: 'eager', fallbackWidth: 768, wide: true }) %><figcaption>Taille de haie<span>Mise au cordeau et évacuation des déchets de coupe</span></figcaption></figure>
+      <figure class="project" data-reveal><%- images.img('jardin-arbore-apres-entretien', { alt: 'Jardin arboré après un passage d’entretien', sizes: portfolioSizes, fallbackWidth: 768, wide: true }) %><figcaption>Entretien d’un jardin arboré<span>Nettoyage des zones plantées et de la pelouse</span></figcaption></figure>
+      <figure class="project" data-reveal><%- images.img('vegetaux-plantation', { alt: 'Massif composé de feuillages variés', sizes: portfolioSizes, fallbackWidth: 768, wide: true }) %><figcaption>Travail de plantation<span>Choix et mise en place des végétaux</span></figcaption></figure>
+      <figure class="project" data-reveal><%- images.img('creation-paysagere', { alt: 'Aménagement associant végétaux et matériaux minéraux', sizes: portfolioSizes, fallbackWidth: 768, wide: true }) %><figcaption>Création paysagère<span>Organisation des volumes et des circulations</span></figcaption></figure>
+      <figure class="project" data-reveal><%- images.img('finitions-chantier-paysagiste', { alt: 'Paysagiste réalisant les finitions d’un chantier', sizes: portfolioSizes, fallbackWidth: 768, wide: true }) %><figcaption>Finitions de chantier<span>Contrôle des détails avant remise au propre</span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band"><div class="shell cta-band__inner"><h2>Vous souhaitez le même soin pour votre jardin ?</h2><a class="button button--light" href="/contact.html">Obtenir mon devis</a></div></section>

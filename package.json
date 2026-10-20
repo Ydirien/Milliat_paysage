@@ -1,0 +1,21 @@
+{
+  "name": "milliat-paysage",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Site vitrine Eleventy/EJS de Milliat Paysage",
+  "scripts": {
+    "images": "node scripts/optimize-images.mjs",
+    "build": "npm run images && eleventy",
+    "start": "npm run images && eleventy --serve",
+    "test": "npm run build && node scripts/check-build.mjs"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.7",
+    "@11ty/eleventy-plugin-ejs": "^1.0.0",
+    "ejs": "^3.1.10",
+    "sharp": "^0.35.5"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

@@ -1,0 +1,48 @@
+---
+layout: layouts/base.ejs
+title: Demander un devis paysagiste à Altkirch | Milliat Paysage
+description: Demandez un devis gratuit pour l’entretien, la plantation ou l’aménagement de votre jardin autour d’Altkirch. Réponse sous 48h ouvrées.
+permalink: contact.html
+---
+<header class="page-hero">
+  <div class="shell page-hero__grid">
+    <div><span class="kicker">Demande de devis</span><h1>Devis paysagiste gratuit à Altkirch</h1></div>
+    <p>Recevez un premier retour sous 48h ouvrées. Indiquez votre commune, les travaux souhaités et la surface approximative. Je vous répondrai personnellement et je proposerai une visite si elle est nécessaire.</p>
+  </div>
+</header>
+
+<section class="section">
+  <div class="shell contact-grid">
+    <div class="contact-details">
+      <span class="kicker">Contact direct</span>
+      <h2>Votre demande arrive directement chez Alexis.</h2>
+      <address>
+        <p><strong>Zone d’intervention</strong><br><%= site.area %></p>
+        <% if (site.telephone) { %><p><strong>Téléphone</strong><br><a href="tel:<%= site.telephone.replace(/\s/g, '').replace(/^0/, '+33') %>"><%= site.telephone %></a></p><% } %>
+        <p><strong>E-mail</strong><br><a href="mailto:<%= site.email %>"><%= site.email %></a></p>
+      </address>
+      <div class="contact-meta"><p><strong>Disponibilités</strong><br>Du lundi au vendredi<br>de 8h à 18h</p><p>Après votre message, je pourrai vous demander quelques photos afin de préparer la visite.</p><p>Le devis est gratuit et ne vous engage pas.</p></div>
+    </div>
+
+    <form class="contact-form" action="/send-mail.php" method="post" data-contact-form data-contact-email="<%= site.email %>">
+      <h2 class="contact-form__title">Parlez-moi de votre jardin</h2>
+      <p class="form-note form-note--intro">Les champs marqués d’un astérisque (<span class="required">*</span>) sont obligatoires.</p>
+      <div class="form-status" data-form-status tabindex="-1" hidden></div>
+      <div class="form-grid">
+        <div class="field"><label for="prenom">Prénom <span class="required" aria-hidden="true">*</span></label><input id="prenom" name="prenom" type="text" maxlength="80" autocomplete="given-name" minlength="2" required aria-required="true" data-error-missing="Indiquez votre prénom." data-error-invalid="Votre prénom doit comporter au moins 2 caractères."></div>
+        <div class="field"><label for="nom">Nom <span class="required" aria-hidden="true">*</span></label><input id="nom" name="nom" type="text" maxlength="80" autocomplete="family-name" minlength="2" required aria-required="true" data-error-missing="Indiquez votre nom." data-error-invalid="Votre nom doit comporter au moins 2 caractères."></div>
+        <div class="field"><label for="email">E-mail <span class="required" aria-hidden="true">*</span></label><input id="email" name="email" type="email" maxlength="254" autocomplete="email" required aria-required="true" aria-describedby="email-help" data-error-missing="Indiquez votre adresse e-mail." data-error-invalid="Saisissez une adresse e-mail valide, par exemple nom@exemple.fr."><span id="email-help" class="form-note">Exemple, nom@exemple.fr</span></div>
+        <div class="field"><label for="telephone">Téléphone</label><input id="telephone" name="telephone" type="tel" maxlength="30" autocomplete="tel" inputmode="tel"></div>
+        <div class="field field--full"><label for="secteur">Commune du projet</label><input id="secteur" name="secteur" type="text" maxlength="100" autocomplete="address-level2" placeholder="Ex. Altkirch"></div>
+        <div class="field field--full"><label for="sujet">Objet de la demande <span class="required" aria-hidden="true">*</span></label><select id="sujet" name="sujet" required aria-required="true" data-error-missing="Choisissez l’objet de votre demande."><option value="">Choisir un objet</option><option value="devis">Demande de devis</option><option value="info">Demande d’information</option><option value="reclamation">Suivi d’une prestation</option></select></div>
+        <div class="field field--full"><label for="message">Travaux souhaités <span class="required" aria-hidden="true">*</span></label><textarea id="message" name="message" maxlength="5000" minlength="10" required aria-required="true" aria-describedby="message-help" data-error-missing="Décrivez les travaux souhaités." data-error-invalid="Votre message doit comporter au moins 10 caractères."></textarea><span id="message-help" class="form-note">Précisez les travaux, la surface approximative et la période souhaitée</span></div>
+        <div class="field field--full">
+          <div class="checkbox"><input id="rgpd" name="rgpd" type="checkbox" value="1" required aria-required="true" aria-describedby="rgpd-help" data-error-missing="Cochez la case pour confirmer avoir pris connaissance de la politique de confidentialité."><label for="rgpd">J’ai pris connaissance de la politique de confidentialité et du traitement de mes données pour répondre à ma demande. <span class="required" aria-hidden="true">*</span></label></div>
+          <p id="rgpd-help" class="form-note">Vos informations sont transmises à Milliat Paysage et à ses prestataires techniques pour traiter votre demande. Consultez la <a href="/politique-confidentialite.html">politique de confidentialité</a>. Vous pouvez exercer vos droits à <a href="mailto:<%= site.email %>"><%= site.email %></a>.</p>
+        </div>
+        <div class="field-trap" aria-hidden="true"><label for="site_web">Ne pas remplir ce champ</label><input id="site_web" name="site_web" type="text" tabindex="-1" autocomplete="off"></div>
+        <div class="field field--full"><button class="button" type="submit">Demander mon devis gratuit</button></div>
+      </div>
+    </form>
+  </div>
+</section>

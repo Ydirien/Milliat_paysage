@@ -1,0 +1,51 @@
+<%
+const businessId = site.url + '/#entreprise';
+const business = {
+  '@type': 'LandscapingBusiness',
+  '@id': businessId,
+  name: site.name,
+  legalName: site.legalName,
+  url: site.url + '/',
+  image: site.url + '/assets/images/generated/' + site.ogImage.stem + '-og.jpg',
+  logo: site.url + '/assets/images/generated/logo-milliat-v2.webp',
+  email: site.email,
+  identifier: { '@type': 'PropertyValue', propertyID: 'SIRET', value: site.siret },
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: site.streetAddress,
+    postalCode: site.postalCode,
+    addressLocality: site.addressLocality,
+    addressRegion: 'Haut-Rhin',
+    addressCountry: site.addressCountry
+  },
+  founder: { '@type': 'Person', name: 'Alexis Milliat' },
+  foundingDate: site.founded,
+  openingHoursSpecification: [{
+    '@type': 'OpeningHoursSpecification',
+    dayOfWeek: site.hours.days,
+    opens: site.hours.opens,
+    closes: site.hours.closes
+  }],
+  areaServed: [
+    { '@type': 'AdministrativeArea', name: 'Sundgau' },
+    ...site.communes.map(name => ({ '@type': 'City', name }))
+  ],
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Prestations paysagères',
+    itemListElement: site.services.map(service => ({
+      '@type': 'Offer',
+      itemOffered: { '@type': 'Service', name: service.name, url: site.url + service.url, provider: { '@id': businessId } }
+    }))
+  }
+};
+if (site.telephone) business.telephone = site.telephone;
+if (site.sameAs.length) business.sameAs = site.sameAs;
+const graph = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    { '@type': 'WebSite', '@id': site.url + '/#site', url: site.url + '/', name: site.name, inLanguage: 'fr-FR', publisher: { '@id': businessId } },
+    business
+  ]
+};
+%><script type="application/ld+json"><%- JSON.stringify(graph).replace(/</g, '\\u003c') %></script>

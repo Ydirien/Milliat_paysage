@@ -1,0 +1,102 @@
+---
+layout: layouts/base.ejs
+title: Paysagiste à Altkirch | Milliat Paysage
+description: Alexis Milliat réalise la création, la plantation et l’entretien de jardins dans un rayon de 30 km autour d’Altkirch.
+permalink: index.html
+---
+<% const cardSizes = '(min-width: 861px) 380px, calc(100vw - 2rem)'; const projectSizes = '(min-width: 1200px) 570px, (min-width: 581px) 50vw, calc(100vw - 2rem)'; %>
+<section class="garden-hero">
+  <div class="garden-hero__media">
+    <%- images.img('jardin-entretenu', { alt: 'Jardin entretenu avec pelouse, haies et massifs fleuris', sizes: '100vw', loading: 'eager', fetchpriority: 'high' }) %>
+  </div>
+  <div class="shell garden-hero__inner">
+    <div class="garden-hero__card">
+      <span class="kicker">Alexis Milliat · artisan paysagiste</span>
+      <h1>Création et entretien de jardins à Altkirch.</h1>
+      <p>Vous voulez un jardin propre sans y passer vos week-ends ? Je prends en charge les plantations, la tonte, la taille des haies et l’entretien courant.</p>
+      <div class="garden-hero__actions">
+        <a class="button" href="/contact.html">Obtenir un devis gratuit</a>
+        <a class="button button--outline" href="/realisations.html">Voir les chantiers</a>
+      </div>
+    </div>
+    <p class="garden-hero__area"><strong>Zone d’intervention</strong><br>Environ 30 km autour d’Altkirch<br>dans le Sundgau</p>
+  </div>
+</section>
+
+<div class="practical-strip">
+  <div class="shell practical-strip__grid">
+    <div class="practical-strip__item"><strong>Devis gratuit</strong><span>Un prix défini avant le début des travaux</span></div>
+    <div class="practical-strip__item"><strong>Un interlocuteur unique</strong><span>Alexis prépare le devis et réalise le chantier</span></div>
+    <div class="practical-strip__item"><strong>Réponse sous 48h ouvrées</strong><span>Du lundi au vendredi de 8h à 18h</span></div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="shell">
+    <div class="section-heading" data-reveal>
+      <div><span class="kicker">Les prestations</span><h2>Un jardin plus propre et moins contraignant.</h2></div>
+      <p class="lede">Confiez-moi un travail précis ou regroupez plusieurs besoins lors du même passage. Vous recevez un devis détaillé avant toute intervention.</p>
+    </div>
+    <div class="service-cards">
+      <article class="service-card" data-reveal>
+        <%- images.img('amenagement-paysager', { className: 'service-card__image', alt: 'Aménagement paysager avec plantations', sizes: cardSizes, fallbackWidth: 480, wide: true }) %>
+        <div class="service-card__body"><h3>Aménager</h3>
+        <p>Transformez un espace vide ou peu pratique en jardin agréable à utiliser.</p>
+        <ul><li>Allées et cheminements</li><li>Création de massifs</li><li>Préparation du terrain</li></ul></div>
+      </article>
+      <article class="service-card" data-reveal>
+        <%- images.img('vegetaux-plantation', { className: 'service-card__image', alt: 'Végétaux préparés pour une plantation', sizes: cardSizes, fallbackWidth: 480, wide: true }) %>
+        <div class="service-card__body"><h3>Planter</h3>
+        <p>Installez des végétaux adaptés au terrain et au temps que vous souhaitez consacrer à leur entretien.</p>
+        <ul><li>Arbres et arbustes</li><li>Haies et talus</li><li>Semis de gazon</li></ul></div>
+      </article>
+      <article class="service-card" data-reveal>
+        <%- images.img('entretien-jardin-arbore', { className: 'service-card__image', alt: 'Entretien d’un jardin arboré', sizes: cardSizes, fallbackWidth: 480, wide: true }) %>
+        <div class="service-card__body"><h3>Entretenir</h3>
+        <p>Retrouvez un extérieur net sans sacrifier vos week-ends à la tonte et à la taille.</p>
+        <ul><li>Tonte et scarification</li><li>Taille de haies</li><li>Nettoyage saisonnier</li></ul></div>
+      </article>
+    </div>
+    <p class="section-more"><a class="text-link" href="/services.html">Consulter le détail des prestations</a></p>
+  </div>
+</section>
+
+<section class="section section--cream">
+  <div class="shell field-note">
+    <div class="field-note__image" data-reveal>
+      <%- images.img('alexis-milliat-paysagiste', { alt: 'Alexis Milliat, paysagiste indépendant', sizes: '(min-width: 861px) 480px, calc(100vw - 2rem)' }) %>
+    </div>
+    <div class="field-note__copy" data-reveal>
+      <span class="kicker">Votre paysagiste</span>
+      <h2>Vous traitez directement avec la personne qui réalise les travaux.</h2>
+      <p>Je m’appelle Alexis Milliat. Je travaille dans le paysage depuis 2020 après une formation dédiée et une première expérience en entreprise autour de Bourgoin-Jallieu.</p>
+      <p>Je viens voir le terrain, je prépare le devis et je réalise le chantier. Vous savez qui contacter et vous n’avez pas à répéter votre demande à plusieurs personnes.</p>
+      <p class="field-note__quote">Je vous propose ce qui convient au terrain, à votre budget et au temps que vous voulez consacrer au jardin.</p>
+      <a class="text-link" href="/a-propos.html">En savoir plus sur mon parcours</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="shell">
+    <div class="section-heading"><div><span class="kicker">Avant l’intervention</span><h2>Un devis clair avant de commencer.</h2></div><p class="lede">Nous définissons les travaux, les fournitures et la date d’intervention. Vous validez le prix avant que je commence.</p></div>
+    <div class="steps">
+      <article class="step"><b>1 · Échange</b><h3>Vous décrivez le travail</h3><p>Indiquez la commune et envoyez quelques photos pour obtenir un premier retour rapidement.</p></article>
+      <article class="step"><b>2 · Visite</b><h3>Je vérifie sur place</h3><p>Je mesure les surfaces, regarde les accès et confirme la solution la plus adaptée.</p></article>
+      <article class="step"><b>3 · Devis</b><h3>Vous décidez tranquillement</h3><p>Le prix et les travaux prévus sont écrits noir sur blanc avant de réserver une date.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="section section--cream">
+  <div class="shell">
+    <div class="section-heading"><div><span class="kicker">Quelques interventions</span><h2>Regardez le résultat sur le terrain.</h2></div><p class="lede">Découvrez des travaux de tonte, de taille et d’entretien réalisés chez mes clients.</p></div>
+    <div class="project-grid">
+      <figure class="project" data-reveal><%- images.img('tonte-pelouse', { alt: 'Pelouse fraîchement tondue avec bandes régulières', sizes: projectSizes, fallbackWidth: 768, wide: true }) %><figcaption>Tonte de pelouse<span>Passage régulier et finitions des bordures</span></figcaption></figure>
+      <figure class="project" data-reveal><%- images.img('taille-haie', { alt: 'Haie de jardin taillée de façon régulière', sizes: projectSizes, fallbackWidth: 768, wide: true }) %><figcaption>Taille de haie<span>Remise en ligne et nettoyage après la coupe</span></figcaption></figure>
+    </div>
+    <p class="section-more"><a class="text-link" href="/realisations.html">Voir davantage de photos</a></p>
+  </div>
+</section>
+
+<section class="cta-band"><div class="shell cta-band__inner"><h2>Votre jardin a besoin d’un vrai coup de propre ?</h2><a class="button button--light" href="/contact.html">Demander mon devis</a></div></section>

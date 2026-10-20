@@ -1,0 +1,44 @@
+{
+  "name": "Milliat Paysage",
+  "legalName": "Alexis Milliat, Milliat Paysage",
+  "url": "https://milliatpaysage.fr",
+  "email": "milliat.paysage@gmail.com",
+  "telephone": "",
+  "sameAs": [],
+  "siret": "10059218700015",
+  "streetAddress": "27 RUE des Vignes",
+  "postalCode": "68200",
+  "addressLocality": "Mulhouse",
+  "addressCountry": "FR",
+  "area": "Altkirch et jusqu’à 30 km alentour",
+  "region": "Sundgau, Haut-Rhin",
+  "communes": [
+    "Altkirch",
+    "Aspach",
+    "Carspach",
+    "Hirtzbach",
+    "Hirsingue",
+    "Walheim",
+    "Illfurth",
+    "Waldighofen",
+    "Dannemarie",
+    "Ferrette",
+    "Brunstatt-Didenheim",
+    "Mulhouse"
+  ],
+  "hours": { "label": "Du lundi au vendredi, de 8h à 18h", "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "08:00", "closes": "18:00" },
+  "founded": "2020",
+  "description": "Création, aménagement et entretien de jardins à Altkirch et dans le Sundgau.",
+  "ogImage": { "stem": "jardin-entretenu", "alt": "Jardin entretenu avec pelouse, haies et massifs fleuris" },
+  "services": [
+    { "name": "Aménagement paysager", "url": "/services.html#amenagement" },
+    { "name": "Plantation et végétalisation", "url": "/services.html#plantation" },
+    { "name": "Entretien des espaces verts", "url": "/services.html#entretien" }
+  ],
+  "nav": [
+    { "label": "Accueil", "url": "/" },
+    { "label": "Services", "url": "/services.html" },
+    { "label": "Réalisations", "url": "/realisations.html" },
+    { "label": "À propos", "url": "/a-propos.html" }
+  ]
+}
